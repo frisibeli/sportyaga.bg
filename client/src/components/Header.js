@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const Header = props => (
     <nav className="nav has-shadow" id="top">
@@ -14,9 +15,9 @@ const Header = props => (
                 <span></span>
               </span>
               <div className="nav-right nav-menu">
-                <a className="nav-item is-tab is-active">
+                <Link className="nav-item is-tab is-active" to="/">
                   Начало
-                </a>
+                </Link>
                 <a className="nav-item is-tab">
                   Нов член
                 </a>
@@ -30,9 +31,9 @@ const Header = props => (
                   <a className="button">
                     Вход
                   </a>
-                  <a className="button is-info">
+                  <Link className="button is-info" to="/register">
                     Регистрация
-                  </a>
+                  </Link>
                 </span>
               </div>
             </div>

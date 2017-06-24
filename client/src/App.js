@@ -31,11 +31,6 @@ class App extends Component {
                                 <SportPreview/>
                             </Page>
                         )} />
-                        {/*<Route path="/team-preview" render={()=>(
-                            <Page title="Преглед на отбор">
-                                <TeamPreview team="A-отбора"/>
-                            </Page>
-                        )} />*/}
                         <Route path="/team-create" render={()=>(
                             <Page title="Създаване на отбор" leftColumn="http://placehold.it/800x60">
                                 <CreateTeam/>
