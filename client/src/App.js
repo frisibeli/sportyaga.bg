@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import Header from './components/Header';
 import LandingPage from './views/LandingPage';
-import './App.css';
 
 class App extends Component {
   render() {
