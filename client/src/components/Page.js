@@ -9,7 +9,7 @@ const Page = props => (
     <section className="section">
         <div className="container content">
             {props.title && <h1>{props.title}</h1>}
-            {props.leftColumn? props.children:(
+            {!props.leftColumn? props.children:(
              <div className="columns">
                 <div className="column is-5">
                     <figure className="image is-4by3">

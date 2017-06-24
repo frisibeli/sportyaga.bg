@@ -5,8 +5,8 @@ import logo from './logo.svg';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Page from './components/Page';
+
 import LandingPage from './views/LandingPage';
-import Page from './components/Page';
 import RegisterPage from './views/RegisterPage'
 import ForgottenPasswordPage from './views/ForgottenPasswordPage'
 import AllTeams from './views/AllTeams'
@@ -21,7 +21,7 @@ class App extends Component {
                 {/*</Page>*/}
 
                 <Page title="Забравена парола">
-                    <ForgottenPasswordPage/>
+                    <RegisterPage/>
                 </Page>
                 <Footer />
             </div>
