@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types'
 import '../styles/teamPreview.css';
 const propTypes = {};
@@ -59,13 +60,17 @@ const TeamPreview = props => {
                         <div className="box is-gray">
                             <div className="items">
                                 <p className="control">
-                                    <button className="button is-active medium">Напусни отбора</button>
+                                    <Link className="button is-active medium" to="/team-all">Напусни отбора
+                                    </Link>
                                     <br/>
-                                    <button className="button is-active medium">Търси хора</button>
+                                    <Link className="button is-active medium" to="/team-all">Търси хора
+                                    </Link>
                                     <br/>
-                                    <button className="button is-active medium">Получени покани</button>
+                                    <Link className="button is-active medium" to="/team-all">Получени покани
+                                    </Link>
                                     <br/>
-                                    <button className="button is-active medium">Изпрати покана</button>
+                                    <Link className="button is-active medium" to="/join-team">Изпрати покана
+                                    </Link>
                                     <br/>
                                     <button className="button is-active medium" disabled="disabled">Адрес на терена
                                     </button>

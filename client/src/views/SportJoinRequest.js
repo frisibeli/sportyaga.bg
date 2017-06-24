@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types'
 const propTypes = {};
 
@@ -45,8 +46,10 @@ const SportJoinRequest = props => {
                 </span>
             </p>
             <p className="control">
-                <button className="button is-primary">Откажи записване</button>
-                <button className="button is-default Radio">Приеми записване</button>
+                <Link className="button is-primary" to="/team-preview">Откажи записване
+                </Link>
+                <Link className="button is-default margin" to="/team-preview">Приеми записване
+                </Link>
             </p>
         </div>
 

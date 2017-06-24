@@ -63,9 +63,9 @@ const CreateTeam = props => {
             {/*</p>*/}
 
             <p className="control">
-                <Link className="button is-active" to="/all-teams">Откажи създаване
+                <Link className="button is-active" to="/team-all">Откажи създаване
                 </Link>
-                <Link className="button is-active margin" to="/all-teams">Създай отбор
+                <Link className="button is-active margin" to="/team-all">Създай отбор
                 </Link>
                 {/*<button className="button is-active">Откажи създаване</button>*/}
                 {/*<button className="button is-active margin">Създай отбор</button>*/}

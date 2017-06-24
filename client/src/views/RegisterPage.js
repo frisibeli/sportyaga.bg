@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const RegisterPage = props => (
     <div>
@@ -34,8 +35,12 @@ const RegisterPage = props => (
                                 </p>
                                 <hr/>
                                 <p className="control">
-                                    <button className="button is-primary" >Регистрирай</button>
-                                    <button className="button is-default">Откажи</button>
+                                    <Link className="button is-primary" to="/sport-all">Регистрирай
+                                    </Link>
+                                    <Link className="button is-default" to="/">Откажи
+                                    </Link>
+                                    {/*<button className="button is-primary" >Регистрирай</button>*/}
+                                    {/*<button className="button is-default">Откажи</button>*/}
                                 </p>
                             </div>
                             {/*<p className="has-text-centered">*/}

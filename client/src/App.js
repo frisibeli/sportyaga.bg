@@ -9,6 +9,7 @@ import Page from './components/Page';
 
 import LandingPage from './views/LandingPage';
 import RegisterPage from './views/RegisterPage';
+import LoginPage from './views/LoginPage';
 import SportPreview from './views/SportPreview';
 import SportJoinRequest from './views/SportJoinRequest';
 import TeamPreview from './views/TeamPreview';
@@ -22,10 +23,14 @@ class App extends Component {
         return (
             <div>
                 <Header />
-                  <Switch>
+                <Switch>
+                    <Route path="/login" render={() => (
+                        <Page><LoginPage/></Page>
+                    )}/>
                     <Route path="/register" render={() => (
                         <Page><RegisterPage/></Page>
                     )}/>
+
                     <Route path="/forgotten-password" render={() => (
                         <Page><ForgottenPasswordPage/></Page>
                     )}/>
@@ -47,7 +52,7 @@ class App extends Component {
                         </Page>
                     )}/>
                     <Route path="/team-preview" render={() => (
-                        <Page title="Преглед на отбор" leftColumn="http://placehold.it/800x60">
+                        <Page title="Преглед на отбор">
                             <TeamPreview/>
                         </Page>
                     )}/>
@@ -56,14 +61,14 @@ class App extends Component {
                             <SportJoinRequest/>
                         </Page>
                     )}/>
-
                     <Route path="/" render={() => (
                         <Page><LandingPage/></Page>
                     )}/>
                 </Switch>
                 <Footer />
             </div>
-        );
+        )
+            ;
     }
 
 }

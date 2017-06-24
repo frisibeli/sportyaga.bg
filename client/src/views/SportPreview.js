@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types'
 
 const propTypes = {};
@@ -14,6 +15,11 @@ const SportPreview = props => (
             е навлязъл и в публикуването на електронни издания като е запазен почти без промяна. Популяризиран е през
             60те години на 20ти век със издаването на Letraset листи, съдържащи Lorem Ipsum пасажи, популярен е и в наши
             дни във софтуер за печатни издания като Aldus PageMaker, който включва различни версии на Lorem Ipsum.
+        </p>
+
+        <p className="control">
+            <Link className="button Button--hollow-success" to="/team-all">Покажи отбори
+            </Link>
         </p>
     </div>
 );

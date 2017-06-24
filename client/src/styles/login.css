@@ -53,8 +53,7 @@ html,body {
 }
 
 .hero-banner .hero {
-  /*background: url('../images/login.png');*/
-  background-position: center;
+  background: url('../images/login.jpg') center;
   background-size: cover;
   background-blend-mode: screen;
 }
