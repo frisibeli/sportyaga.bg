@@ -34,10 +34,14 @@ class App extends Component {
                     {/*<SportJoinRequest/>*/}
                 {/*</Page>*/}
 
-                <Page title="Създаване на отбор" leftColumn="http://placehold.it/800x60">
+               {/* <Page title="Създаване на отбор" leftColumn="http://placehold.it/800x60">
                     <CreateTeam/>
                 </Page>
                 */}
+                {/*<Page title="Моите отбори">
+                <MyTeams/>
+                </Page>
+              */}
                 <Footer />
             </div>
         );

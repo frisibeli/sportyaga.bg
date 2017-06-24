@@ -12,13 +12,13 @@ const MyTeams = props => (
           <header className="card-header">
             <p className="card-header-title">
               
-              @username
+              @Валетата
             </p>
            
           </header>
           <div className="card-image">
             <figure className="image is-4by3">
-              <img src="https://placehold.it/1280x960" alt="Image"></img>
+               <img src={require('../images/1.jpg')} alt="Image"/>
             </figure>
           </div>
           <div className="card-content">
@@ -49,13 +49,13 @@ const MyTeams = props => (
           <header className="card-header">
             <p className="card-header-title">
               
-              @username
+              @Дамите
             </p>
            
           </header>
           <div className="card-image">
             <figure className="image is-4by3">
-              <img src="https://placehold.it/1280x960" alt="Image"></img>
+               <img src={require('../images/2.jpg')} alt="Image"/>
             </figure>
           </div>
           <div className="card-content">
@@ -84,13 +84,13 @@ const MyTeams = props => (
           <header className="card-header">
             <p className="card-header-title">
               
-              @username
+              @Гардеробите
             </p>
            
           </header>
           <div className="card-image">
             <figure className="image is-4by3">
-              <img src="https://placehold.it/1280x960" alt="Image"></img>
+               <img src={require('../images/3.jpg')} alt="Image"/>
             </figure>
           </div>
           <div className="card-content">
@@ -115,8 +115,114 @@ const MyTeams = props => (
           </div>
         </div>
       </div>
+
+
     </div>
-    
+    <div className="columns">
+     <div className="column is-4">
+        <div className="card">
+          <header className="card-header">
+            <p className="card-header-title">
+              
+              @Лексис
+            </p>
+           
+          </header>
+          <div className="card-image">
+            <figure className="image is-4by3">
+                <img src={require('../images/4.jpg')} alt="Image"/>
+            </figure>
+          </div>
+          <div className="card-content">
+            <div className="panel-block-item">
+            <div className="myteams">
+              <a className="button" href="#">
+            		<div className="view">
+                    Преглед
+                    </div>
+                  </a>
+                  </div>
+                  <div className="myteams">
+            <a className="button" href="#">
+            		<div className="view">
+                    Напускане
+                    </div>
+                  </a>
+                  </div>          
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="column is-4">
+        <div className="card">
+          <header className="card-header">
+            <p className="card-header-title">
+              
+              @Спокойните
+            </p>
+           
+          </header>
+          <div className="card-image">
+            <figure className="image is-4by3">
+               <img src={require('../images/5.jpg')} alt="Image"/>
+            </figure>
+          </div>
+          <div className="card-content">
+            <div className="panel-block-item">
+            <div className="myteams">
+              <a className="button" href="#">
+            		<div className="view">
+                    Преглед
+                    </div>
+                  </a>
+                  </div>
+                  <div className="myteams">
+            <a className="button" href="#">
+            		<div className="view">
+                    Напускане
+                    </div>
+                  </a>
+                  </div>          
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="column is-4">
+        <div className="card">
+          <header className="card-header">
+            <p className="card-header-title">
+              
+              @Кавалерия
+            </p>
+           
+          </header>
+          <div className="card-image">
+            <figure className="image is-4by3">
+               <img src={require('../images/6.jpg')} alt="Image"/>
+            </figure>
+          </div>
+          <div className="card-content">
+            <div className="panel-block-item">
+            <div className="myteams">
+              <a className="button" href="#">
+            		<div className="view">
+                    Преглед
+                    </div>
+                  </a>
+                  </div>
+                  <div className="myteams">
+            <a className="button" href="#">
+            		<div className="view">
+                    Напускане
+                    </div>
+                  </a>
+                  </div>          
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
   </div>
 );
 
