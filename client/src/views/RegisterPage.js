@@ -34,7 +34,7 @@ const RegisterPage = props => (
                                 </p>
                                 <hr/>
                                 <p className="control">
-                                    <button className="button is-primary">Регистрирай</button>
+                                    <button className="button is-primary" >Регистрирай</button>
                                     <button className="button is-default">Откажи</button>
                                 </p>
                             </div>
