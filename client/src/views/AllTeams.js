@@ -18,7 +18,6 @@ const TemplatePage = props => {
 	]
 	return (
     <div>
-       <h1>Преглед на всички отбори</h1>
        <table>
             <thead>
             <tr>
