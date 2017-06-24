@@ -11,10 +11,12 @@ import LandingPage from './views/LandingPage';
 import RegisterPage from './views/RegisterPage';
 import SportPreview from './views/SportPreview';
 import SportJoinRequest from './views/SportJoinRequest';
+import TeamPreview from './views/TeamPreview';
 import CreateTeam from './views/CreateTeam';
 
 import ForgottenPasswordPage from './views/ForgottenPasswordPage'
 import AllTeams from './views/AllTeams'
+import MyTeams from './views/MyTeams'
 class App extends Component {
     render() {
         return (
