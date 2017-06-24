@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import '../styles/allteams.css'
-const TemplatePage = props => {
+const AllTeams = props => {
 	const teams = [
 		{name: "Машините", players:10, searchingFor:"нападател", advanced:true},
 		{name: "Валетата", players:4, searchingFor:"либеро", advanced:false},
@@ -12,9 +12,6 @@ const TemplatePage = props => {
 		{name: "Кавалерия", players:5, searchingFor:"либеро", advanced:false},
 		{name: "Спокойните", players:7, searchingFor:"център", advanced:false},
 		{name: "Лексис", players:11, searchingFor:"нападател", advanced:true}
-
-
-
 	]
 	return (
     <div>
@@ -49,4 +46,4 @@ const TemplatePage = props => {
     </div>
 )};
 
-export default TemplatePage;
+export default AllTeams;

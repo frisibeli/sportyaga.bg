@@ -11,6 +11,7 @@ import RegisterPage from './views/RegisterPage';
 import SportPreview from './views/SportPreview';
 import ForgottenPasswordPage from './views/ForgottenPasswordPage'
 import AllTeams from './views/AllTeams'
+import MyTeams from './views/MyTeams'
 class App extends Component {
 
     render() {
@@ -20,10 +21,13 @@ class App extends Component {
                 {/*<Page title="Начална страница">*/}
                     {/*<LandingPage/>*/}
                 {/*</Page>*/}
-
-                <Page title="Преглед на спорт" leftColumn="http://placehold.it/800x60">
+                <Page title="Моите отбори">
+                <MyTeams/>
+                </Page>
+             { /*  <Page title="Преглед на спорт" leftColumn="http://placehold.it/800x60">
                     <SportPreview/>
                 </Page>
+                */}
                 <Footer />
             </div>
         );
