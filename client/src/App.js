@@ -53,7 +53,7 @@ class App extends Component {
                     )}/>
                     <Route path="/team-preview" render={() => (
                         <Page title="Преглед на отбор">
-                            <TeamPreview/>
+                            <TeamPreview otbor={this.props.params}/>
                         </Page>
                     )}/>
                     <Route path="/join-team" render={() => (
