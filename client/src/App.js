@@ -36,7 +36,6 @@ class App extends Component {
 
                 <Page title="Създаване на отбор" leftColumn="http://placehold.it/800x60">
                     <CreateTeam/>
->>>>>>> f08427b18712d30a2ef82813ac01b2a1b5b3a714
                 </Page>
                 */}
                 <Footer />
