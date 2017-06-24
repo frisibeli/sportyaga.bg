@@ -23,6 +23,7 @@ const TemplatePage = props => {
             <thead>
             <tr>
                 <th>Име на отбор</th>
+                <th></th>
                 <th>Брой на хора</th>
                 <th>Търсим</th>
                 <th>Напреднали</th>
@@ -30,9 +31,17 @@ const TemplatePage = props => {
             {teams.map((team, i) => {
             	return <tr key={i}>
             		<td>{team.name}</td>
+            		<td>
+            		<a className="button" href={team.name}>
+            		<div className="view">
+                    Преглед
+                    </div>
+                  </a>
+                  </td>
+            		
             		<td>{team.players}</td>
             		<td>{team.searchingFor}</td>
-            		<td>{team.advanced}</td>
+            		<td><input type="checkbox" disabled checked={team.advanced}/></td>
             	</tr>
             })}
             </thead>
