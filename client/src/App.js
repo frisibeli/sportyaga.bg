@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import LandingPage from './views/LandingPage';
 
 class App extends Component {
@@ -13,6 +14,7 @@ class App extends Component {
               <LandingPage />
             </div>
           </section>
+          <Footer />
       </div>
     );
   }
