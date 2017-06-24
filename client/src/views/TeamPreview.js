@@ -14,7 +14,7 @@ const TeamPreview = props => {
     ];
     return (
         <div>
-            {props.team}
+            {console.log(props)}
             <hr/>
             <div className="columns">
                 <fieldset className="FormField">

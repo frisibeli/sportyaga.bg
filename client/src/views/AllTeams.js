@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types'
 import '../styles/allteams.css'
 import {Link} from 'react-router-dom'
@@ -30,11 +31,9 @@ const AllTeams = props => {
             	return <tr key={i}>
             		<td>{team.name}</td>
             		<td>
-            		<a className="button" href={team.name}>
-            		<div className="view">
-                    Преглед
-                    </div>
-                  </a>
+                        <Link className="button " to="/team-preview" props={{ otbor: team.name }}>Преглед
+                        </Link>
+            		{/*<a className="button" href={team.name}>*/}
                   </td>
             		
             		<td>{team.players}</td>
