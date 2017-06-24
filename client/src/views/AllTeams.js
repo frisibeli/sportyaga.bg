@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import '../styles/allteams.css'
+import {Link} from 'react-router-dom'
 
 const AllTeams = props => {
 	const teams = [
@@ -43,6 +44,10 @@ const AllTeams = props => {
             })}
             </thead>
             </table>
+            <div className="back-button">
+             <Link className="button Button--hollow-success" to="/sport-preview">Назад
+            </Link>
+            </div>
         </div>
     )
 };

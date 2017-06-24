@@ -61,9 +61,15 @@ class App extends Component {
                             <SportJoinRequest/>
                         </Page>
                     )}/>
+                    <Route path="/adding-sport" render={() => (
+                        <Page title="Заявка за добавяне на отбор" leftColumn="leftColumn={require('./images/1.jpg')}">
+                           
+                        </Page>
+                    )}/>
                     <Route path="/" render={() => (
                         <Page><LandingPage/></Page>
                     )}/>
+
                 </Switch>
                 <Footer />
             </div>

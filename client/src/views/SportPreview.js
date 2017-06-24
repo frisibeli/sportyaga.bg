@@ -20,6 +20,9 @@ const SportPreview = props => (
         <p className="control">
             <Link className="button Button--hollow-success" to="/team-all">Покажи отбори
             </Link>
+             <Link className="button Button--hollow-success" to="/sport-preview">Назад
+            </Link>
+
         </p>
     </div>
 );
