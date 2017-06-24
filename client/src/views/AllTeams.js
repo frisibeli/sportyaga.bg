@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types'
 import '../styles/allteams.css'
-import {Link} from 'react-router-dom'
 
 const AllTeams = props => {
 	const teams = [
