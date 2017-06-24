@@ -10,6 +10,7 @@ import LandingPage from './views/LandingPage';
 import RegisterPage from './views/RegisterPage';
 import SportPreview from './views/SportPreview';
 import SportJoinRequest from './views/SportJoinRequest';
+import TeamPreview from './views/TeamPreview';
 import CreateTeam from './views/CreateTeam';
 
 import ForgottenPasswordPage from './views/ForgottenPasswordPage'
@@ -34,8 +35,12 @@ class App extends Component {
                     {/*<SportJoinRequest/>*/}
                 {/*</Page>*/}
 
-                <Page title="Създаване на отбор" leftColumn="http://placehold.it/800x60">
-                    <CreateTeam/>
+                {/*<Page title="Създаване на отбор" leftColumn="http://placehold.it/800x60">*/}
+                    {/*<CreateTeam/>*/}
+                {/*</Page>*/}
+
+                <Page title="Преглед на отбор">
+                    <TeamPreview team="A-отбора"/>
                 </Page>
                 */}
                 <Footer />
