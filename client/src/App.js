@@ -7,7 +7,8 @@ import Footer from './components/Footer';
 import Page from './components/Page';
 
 import LandingPage from './views/LandingPage';
-import RegisterPage from './views/RegisterPage'
+import RegisterPage from './views/RegisterPage';
+import SportPreview from './views/SportPreview';
 import ForgottenPasswordPage from './views/ForgottenPasswordPage'
 import AllTeams from './views/AllTeams'
 class App extends Component {
@@ -20,8 +21,8 @@ class App extends Component {
                     {/*<LandingPage/>*/}
                 {/*</Page>*/}
 
-                <Page title="Забравена парола">
-                    <RegisterPage/>
+                <Page title="Преглед на спорт" leftColumn="http://placehold.it/800x60">
+                    <SportPreview/>
                 </Page>
                 <Footer />
             </div>
