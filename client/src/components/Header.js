@@ -16,23 +16,23 @@ const Header = props => (
               </span>
               <div className="nav-right nav-menu">
                 <a className="nav-item is-tab is-active">
-                  Home
+                  Начало
                 </a>
                 <a className="nav-item is-tab">
-                  Features
+                  Нов член
                 </a>
                 <a className="nav-item is-tab">
-                  Team
+                  За нас
                 </a>
                 <a className="nav-item is-tab">
-                  Help
+                  Контакти
                 </a>
                 <span className="nav-item">
                   <a className="button">
-                    Log in
+                    Вход
                   </a>
                   <a className="button is-info">
-                    Sign up
+                    Регистрация
                   </a>
                 </span>
               </div>
