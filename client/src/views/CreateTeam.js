@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import '../styles/createTeam.css';
+import {Link} from 'react-router-dom';
 const propTypes = {};
 
 const defaultProps = {};
@@ -62,8 +63,12 @@ const CreateTeam = props => {
             {/*</p>*/}
 
             <p className="control">
-                <button className="button is-active">Откажи създаване</button>
-                <button className="button is-active margin">Създай отбор</button>
+                <Link className="button is-active" to="/all-teams">Откажи създаване
+                </Link>
+                <Link className="button is-active margin" to="/all-teams">Създай отбор
+                </Link>
+                {/*<button className="button is-active">Откажи създаване</button>*/}
+                {/*<button className="button is-active margin">Създай отбор</button>*/}
             </p>
         </div>
 

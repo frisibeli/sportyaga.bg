@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const ForgottenPasswordPage = props => (
     <div>
@@ -16,7 +17,8 @@ const ForgottenPasswordPage = props => (
                                     <input className="input" type="text" placeholder="jsmith@example.org"/>
                                 </p>
                                 <p className="control">
-                                    <button className="button Button--hollow-success">Изпрати нова парола</button>
+                                    <Link className="button Button--hollow-success" to="/">Изпрати нова парола
+                                    </Link>
                                 </p>
                             </div>
                             {/*<p className="has-text-centered">*/}

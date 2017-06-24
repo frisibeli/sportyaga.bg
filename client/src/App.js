@@ -22,30 +22,45 @@ class App extends Component {
         return (
             <div>
                 <Header />
+                <Switch>
+                    <Route path="/register" render={() => (
+                        <Page><RegisterPage/></Page>
+                    )}/>
+                    <Route path="/forgotten-password" render={() => (
+                        <Page><ForgottenPasswordPage/></Page>
+                    )}/>
 
-                    <Switch>
-                        <Route path="/register" render={()=>(
-                            <Page><RegisterPage/></Page>
-                        )} />
-                        <Route path="/sport-preview" render={()=>(
-                            <Page title="Преглед на спорт" leftColumn="http://placehold.it/800x60">
-                                <SportPreview/>
-                            </Page>
-                        )} />
-                        <Route path="/team-create" render={()=>(
-                            <Page title="Създаване на отбор" leftColumn="http://placehold.it/800x60">
-                                <CreateTeam/>
-                            </Page>
-                        )} />
-                        <Route path="/join-team" render={()=>(
-                                <Page title="Заявка за присъединяване на отбор" leftColumn="http://placehold.it/800x60">
-                                    <SportJoinRequest/>
-                                </Page>
-                            )} />
-                        <Route path="/" render={()=>(
-                            <Page><LandingPage/></Page>
-                        )} />
-                    </Switch>
+                    <Route path="/sport-preview" render={() => (
+                        <Page title="Преглед на спорт" leftColumn="http://placehold.it/800x60">
+                            <SportPreview/>
+                        </Page>
+                    )}/>
+
+                    <Route path="/team-all" render={() => (
+                        <Page title="Преглед на всички отбори" leftColumn="http://placehold.it/800x60">
+                            <AllTeams/>
+                        </Page>
+                    )}/>
+                    <Route path="/team-create" render={() => (
+                        <Page title="Създаване на отбор" leftColumn="http://placehold.it/800x60">
+                            <CreateTeam/>
+                        </Page>
+                    )}/>
+                    <Route path="/team-preview" render={() => (
+                        <Page title="Преглед на отбор" leftColumn="http://placehold.it/800x60">
+                            <TeamPreview/>
+                        </Page>
+                    )}/>
+                    <Route path="/join-team" render={() => (
+                        <Page title="Заявка за присъединяване на отбор" leftColumn="http://placehold.it/800x60">
+                            <SportJoinRequest/>
+                        </Page>
+                    )}/>
+
+                    <Route path="/" render={() => (
+                        <Page><LandingPage/></Page>
+                    )}/>
+                </Switch>
                 <Footer />
             </div>
         );
