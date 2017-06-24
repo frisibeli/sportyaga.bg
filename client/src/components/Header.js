@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types'
 
 const Header = props => (
     <nav className="nav has-shadow" id="top">
