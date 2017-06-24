@@ -22,7 +22,7 @@ class App extends Component {
         return (
             <div>
                 <Header />
-                <Switch>
+                  <Switch>
                     <Route path="/register" render={() => (
                         <Page><RegisterPage/></Page>
                     )}/>
@@ -37,7 +37,7 @@ class App extends Component {
                     )}/>
 
                     <Route path="/team-all" render={() => (
-                        <Page title="Преглед на всички отбори" leftColumn="http://placehold.it/800x60">
+                        <Page title="Преглед на всички отбори" leftColumn={require('./images/1.jpg')}>
                             <AllTeams/>
                         </Page>
                     )}/>
