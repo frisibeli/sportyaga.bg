@@ -6,7 +6,7 @@ const Header = props => (
             <div className="container">
               <div className="nav-left">
                 <a className="nav-item" href="../index.html">
-                  <img src="../images/bulma.png" alt="Description" />
+                  <img src={require('../images/logo.png')} alt="Description" />
                 </a>
               </div>
               <span className="nav-toggle">
