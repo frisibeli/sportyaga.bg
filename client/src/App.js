@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 // import { Button, Alert, Spinner, Modal } from 'elemental';
 import logo from './logo.svg';
 import Header from './components/Header';
+import HeaderForLoginUsers from './components/HeaderForLoginUsers';
 import Footer from './components/Footer';
 import Page from './components/Page';
 
@@ -19,11 +20,13 @@ import ForgottenPasswordPage from './views/ForgottenPasswordPage'
 import AllTeams from './views/AllTeams'
 import MyTeams from './views/MyTeams'
 import ViewJoinTeam from './views/ViewJoinTeam'
+import SendMessage from './views/SendMessage'
+
 class App extends Component {
     render() {
         return (
             <div>
-                <Header />
+                <HeaderForLoginUsers />
                 <Switch>
                     <Route path="/login" render={() => (
                         <Page><LoginPage/></Page>
@@ -70,6 +73,11 @@ class App extends Component {
                     <Route path="/view-join-team" render={() => (
                         <Page title="Преглед и присъединяване към отбор ">
                            <ViewJoinTeam/>
+                        </Page>
+                    )}/>
+                     <Route path="/send-message" render={() => (
+                        <Page title="Изпращане на лично съобщение">
+                           <SendMessage/>
                         </Page>
                     )}/>
                     <Route path="/" render={() => (
