@@ -18,6 +18,7 @@ import AddingSport from './views/AddingSport'
 import ForgottenPasswordPage from './views/ForgottenPasswordPage'
 import AllTeams from './views/AllTeams'
 import MyTeams from './views/MyTeams'
+import ViewJoinTeam from './views/ViewJoinTeam'
 class App extends Component {
     render() {
         return (
@@ -64,6 +65,11 @@ class App extends Component {
                     <Route path="/adding-sport" render={() => (
                         <Page title="Заявка за добавяне на отбор" leftColumn={require('./images/upload1.JPG')}>
                            <AddingSport/>
+                        </Page>
+                    )}/>
+                    <Route path="/view-join-team" render={() => (
+                        <Page title="Преглед и присъединяване към отбор ">
+                           <ViewJoinTeam/>
                         </Page>
                     )}/>
                     <Route path="/" render={() => (

@@ -46,9 +46,11 @@ const SportJoinRequest = props => {
                 </span>
             </p>
             <p className="control">
-                <Link className="button is-primary" to="/team-preview">Откажи записване
+                <Link className="button is-primary" to="/join-team">Отказ
                 </Link>
-                <Link className="button is-default margin" to="/team-preview">Приеми записване
+                <Link className="button is-default margin" to="/join-team">Присъединяване
+                </Link>
+                <Link className="button is-default margin" to="/view-join-team">Повече информация
                 </Link>
             </p>
         </div>
