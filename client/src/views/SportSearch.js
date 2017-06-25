@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 
-const TemplatePage = props => {
+const SportSearch = props => {
 	return (
     <div>
         <h1><center>Търсене на конкретен спорт</center></h1>
@@ -12,4 +12,4 @@ const TemplatePage = props => {
     </div>
 )};
 
-export default TemplatePage;
+export default SportSearch;

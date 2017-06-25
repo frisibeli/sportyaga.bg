@@ -30,7 +30,7 @@ const AllTeams = props => {
             	return <tr key={i}>
             		<td>{team.name}</td>
             		<td>
-                        <Link className="button " to="/team-preview" props={{ otbor: team.name }}>Преглед
+                        <Link className="button " to={'/team-preview/'+team.name} params={{Pesho:"pesho"}}>Преглед
                         </Link>
             		{/*<a className="button" href={team.name}>*/}
                   </td>
