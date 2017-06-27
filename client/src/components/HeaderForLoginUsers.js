@@ -28,9 +28,12 @@ const HeaderForLoginUsers = props => (
                   Контакти
                 </a>
                 <span className="nav-item">
-                  <a className="button">
-                    Изход
-                  </a>
+                  <Link className="button" to="/login">
+                    Вход
+                  </Link>
+                  <Link className="button is-info" to="/register">
+                    Регистрация
+                  </Link>
                 </span>
               </div>
             </div>

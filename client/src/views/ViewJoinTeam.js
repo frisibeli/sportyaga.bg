@@ -22,14 +22,14 @@ const ViewJoinTeam = props => {
                         <div className="box is-gray">
                             <div className="items">
                                 {teammates.map((teammate, i) => {
-                                    return <div className="box" id={i}>
+                                    return <div className="box" key={i}>
                                         <p className="meta">
                                             <img src={require('../images/user.png')} className="small"
                                                  alt="Description"/>
                                             <span className="title">{teammate.name}</span>
                                             <br/>
                                             <button className="button is-primary">Профил</button>
-                                            <button className="button is-default">ЛС</button>
+                                            <Link className="button is-default" to={'/send-message'}>ЛС</Link>
                                         </p>
                                     </div>
                                 })}
@@ -59,10 +59,10 @@ const ViewJoinTeam = props => {
                         <div className="box is-gray">
                             <div className="items">
                                 <p className="control">
-                                    <Link className="button is-active medium" to="/view-join-team">Присъедининяване
+                                    <Link className="button is-active medium" to="/team-preview">Присъедининяване
                                     </Link>
                                     <br/>
-                                    <Link className="button is-active medium" to="/view-join-team">Отказ
+                                    <Link className="button is-active medium" to="/team-preview">Отказ
                                     </Link>
                                     <br/>
                                    

@@ -49,7 +49,7 @@ const LoginPage = props => (
                                     <p className="control login">
                                         {/*<button className="button is-success is-outlined is-large is-fullwidth">Влез*/}
                                         {/*</button>*/}
-                                        <Link className="button is-success is-outlined is-large is-fullwidth" to="/">Влез
+                                        <Link className="button is-success is-outlined is-large is-fullwidth" to="/logged">Влез
                                         </Link>
                                     </p>
                                 </div>

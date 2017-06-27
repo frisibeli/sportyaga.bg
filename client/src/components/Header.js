@@ -19,7 +19,7 @@ const Header = props => (
                     Начало
                 </Link>
                 <Link className="nav-item is-tab" to="/sport-search">
-                    Търсене на отбор
+                    Търсене на спорт
                 </Link>
                 <Link className="nav-item is-tab" to="/team-create">
                     Създаване на отбор
@@ -40,13 +40,11 @@ const Header = props => (
                 {/*Контакти*/}
                 {/*</a>*/}
                 <span className="nav-item">
-                  <Link className="button" to="/login">
-                    вход
-                  </Link>
-                  <Link className="button is-info" to="/register">
-                    Регистрация
+                    <Link className="button" to="/">
+                    Изход
                   </Link>
                 </span>
+
             </div>
         </div>
     </nav>
