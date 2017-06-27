@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink as Link} from 'react-router-dom';
 
 const Header = props => (
     <nav className="nav has-shadow" id="top">
@@ -15,38 +15,39 @@ const Header = props => (
                 <span></span>
               </span>
             <div className="nav-right nav-menu">
-                <Link className="nav-item is-tab is-active" to="/">
+                {props.authorized ? (
+                <span className="nav-item">
+                <Link exact className="nav-item is-tab" activeClassName="is-active" to="/">
                     Начало
                 </Link>
-                <Link className="nav-item is-tab" to="/sport-search">
+                <Link className="nav-item is-tab" activeClassName="is-active" to="/sport-search">
                     Търсене на отбор
                 </Link>
-                <Link className="nav-item is-tab" to="/team-create">
+                <Link className="nav-item is-tab" activeClassName="is-active" to="/team-create">
                     Създаване на отбор
                 </Link>
-                <Link className="nav-item is-tab" to="/my-teams">
+                <Link className="nav-item is-tab" activeClassName="is-active" to="/my-teams">
                     Моите отбори
                 </Link>
-                <Link className="nav-item is-tab" to="/accept-team">
+                <Link className="nav-item is-tab" activeClassName="is-active" to="/accept-team">
                     Известия(2)
                 </Link>
-                {/*<a className="nav-item is-tab">*/}
-                {/*Нов член*/}
-                {/*</a>*/}
-                {/*<a className="nav-item is-tab">*/}
-                {/*За нас*/}
-                {/*</a>*/}
-                {/*<a className="nav-item is-tab">*/}
-                {/*Контакти*/}
-                {/*</a>*/}
+                </span>):<span></span>}
+                {!props.authorized?(
                 <span className="nav-item">
                   <Link className="button" to="/login">
-                    вход
+                    Вход
                   </Link>
                   <Link className="button is-info" to="/register">
                     Регистрация
                   </Link>
+                </span>):(
+                <span className="nav-item">
+                  <Link className="button" onClick={props.logout} to="/login">
+                    Изход
+                  </Link>
                 </span>
+                )}
             </div>
         </div>
     </nav>

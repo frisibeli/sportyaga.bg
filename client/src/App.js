@@ -25,13 +25,29 @@ import MyTeams from './views/MyTeams';
 import ViewJoinTeam from './views/ViewJoinTeam';
 let pesho;
 class App extends Component {
+    constructor(props, context){
+        super(props, context);
+        this.state = {
+            authorized: true
+        }
+        this.login = this.login.bind(this);
+        this.logout = this.logout.bind(this);
+    }
+
+    login(){
+        this.setState({authorized:true});
+    }
+    logout(){
+        this.setState({authorized:false});
+    }
+
     render() {
         return (
             <div>
-                <HeaderForLoginUsers />
+                <Header authorized={this.state.authorized} logout={this.logout} />
                 <Switch>
                     <Route path="/login" render={() => (
-                        <Page><LoginPage/></Page>
+                        <Page><LoginPage login={this.login}/></Page>
                     )}/>
                     <Route path="/register" render={() => (
                         <Page><RegisterPage/></Page>
@@ -87,7 +103,6 @@ class App extends Component {
                     <Route path="/my-teams" render={() => (
                         <Page title="Преглед на моите отбори">
                             <MyTeams/>
-                            <ViewJoinTeam/>
                         </Page>
                     )}/>
                     <Route path="/send-message" render={() => (

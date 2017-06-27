@@ -29,9 +29,6 @@ const LoginPage = props => (
                     <div className="container">
                         <div className="columns">
                             <div className="column is-8 is-offset-2">
-                                <h1 className="avatar has-text-centered section">
-                                    <img src={"https://placehold.it/128x128"}/>
-                                </h1>
                                 <div className="login-form">
                                     <p className="control has-icon has-icon-right">
                                         <input className="input email-input" type="text"
@@ -49,7 +46,7 @@ const LoginPage = props => (
                                     <p className="control login">
                                         {/*<button className="button is-success is-outlined is-large is-fullwidth">Влез*/}
                                         {/*</button>*/}
-                                        <Link className="button is-success is-outlined is-large is-fullwidth" to="/">Влез
+                                        <Link className="button is-success is-outlined is-large is-fullwidth" onClick={props.login} to="/">Влез
                                         </Link>
                                     </p>
                                 </div>
