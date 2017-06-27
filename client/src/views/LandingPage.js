@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 // import Elemental from 'elemental';
 // import { Button, Alert, Spinner, Modal, ModalHeader, ModalBody, ModalFooter } from 'elemental';
 const propTypes = {};
@@ -27,6 +28,7 @@ const LandingPage = props => (
             също така и сред хората от всички други възрасти. Това е важна предпоставка за едно по-здравословно
             общество.
         </p>
+        <Link to={'/sport-all/0'} className="button is-primary">Преглед на всички спортове</Link>
     </div>
 );
 

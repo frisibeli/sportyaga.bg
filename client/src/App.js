@@ -20,10 +20,10 @@ import CreateTeam from './views/CreateTeam';
 import SendMessage from './views/SendMessage'
 import AddingSport from './views/AddingSport';
 import ForgottenPasswordPage from './views/ForgottenPasswordPage';
+import ViewAllSports from './views/ViewAllSports';
 import AllTeams from './views/AllTeams';
 import MyTeams from './views/MyTeams';
 import ViewJoinTeam from './views/ViewJoinTeam';
-let pesho;
 class App extends Component {
     constructor(props, context){
         super(props, context);
@@ -42,63 +42,98 @@ class App extends Component {
     }
 
     render() {
+        document.title = 'Sportyaga';
         return (
             <div>
                 <Header authorized={this.state.authorized} logout={this.logout} />
                 <Switch>
                     <Route path="/login" render={() => (
                         <Page><LoginPage login={this.login}/></Page>
+
                     )}/>
                     <Route path="/register" render={() => (
-                        <Page><RegisterPage/></Page>
+                        <div>
+                            <HeaderForLoginUsers/>
+                            <Page>
+                                <RegisterPage/>
+                            </Page>
+                        </div>
                     )}/>
 
                     <Route path="/forgotten-password" render={() => (
-                        <Page><ForgottenPasswordPage/></Page>
+                        <div>
+                            <Page><ForgottenPasswordPage/></Page>
+                        </div>
                     )}/>
 
                     <Route path="/sport-preview" render={() => (
-                        <Page title="Преглед на спорт" leftColumn="http://placehold.it/800x60">
-                            <SportPreview/>
-                        </Page>
+                        <div>
+                            <Header/>
+                            <Page title="Преглед на спорт" leftColumn={require('./images/aikido.jpeg')}>
+                                <SportPreview/>
+                            </Page>
+                        </div>
                     )}/>
 
                     <Route path="/team-all" render={() => (
-                        <Page title="Преглед на всички отбори" leftColumn={require('./images/1.jpg')}>
-                            <AllTeams/>
-                        </Page>
+                        <div>
+                            <Header/>
+                            <Page title="Преглед на всички отбори" leftColumn={require('./images/1.jpg')}>
+                                <AllTeams/>
+                            </Page>
+                        </div>
                     )}/>
                     <Route path="/team-create" render={() => (
-                        <Page title="Създаване на отбор" leftColumn="http://placehold.it/800x60">
-                            <CreateTeam/>
-                        </Page>
+                        <div>
+                            <Header/>
+                            <Page title="Създаване на отбор" leftColumn={require('./images/basketball.jpg')}>
+                                <CreateTeam/>
+                            </Page>
+                        </div>
                     )}/>
-                    <Route path="/team-preview/:teamName" component={TeamPreview}  />
                     <Route path="/join-team" render={() => (
-                        <Page title="Заявка за присъединяване на отбор" leftColumn=" http://placehold.it/800x60">
-                            <TeamJoinRequest/>
-                        </Page>
+                        <div>
+                            <Header/>
+                            <Page title="Заявка за присъединяване на отбор"
+                                  leftColumn={require('./images/basketball.jpg')}>
+                                <TeamJoinRequest/>
+                            </Page>
+                        </div>
                     )}/>
                     <Route path="/accept-team" render={() => (
-                        <Page title="Одобряване на нов участник в отбора">
-                            <AcceptTeamRequest/>
-                        </Page>
+                        <div>
+                            <Header/>
+                            <Page title="Одобряване на нов участник в отбора">
+                                <AcceptTeamRequest/>
+                            </Page>
+                        </div>
                     )}/>
 
                     <Route path="/adding-sport" render={() => (
-                        <Page title="Заявка за добавяне на отбор" leftColumn={require('./images/upload1.JPG')}>
-                            <AddingSport/>
-                        </Page>
+                        <div>
+                            <Header/>
+                            <Page title="Заявка за добавяне на отбор" leftColumn={require('./images/upload1.JPG')}>
+                                <AddingSport/>
+                            </Page>
+                        </div>
                     )}/>
                     <Route path="/view-join-team" render={() => (
-                        <Page title="Преглед и присъединяване към отбор ">
-                            <ViewJoinTeam/>
-                        </Page>
+                        <div>
+                            <Header/>
+                            <Page title="Преглед и присъединяване към отбор ">
+
+                                <ViewJoinTeam/>
+                            </Page>
+                        </div>
                     )}/>
                     <Route path="/sport-search" render={() => (
-                        <Page title="Търсене на спорт">
-                            <SportSearch/>
-                        </Page>
+                        <div>
+                            <Header/>
+                            <Page title="Търсене на спорт">
+
+                                <SportSearch/>
+                            </Page>
+                        </div>
                     )}/>
                     <Route path="/my-teams" render={() => (
                         <Page title="Преглед на моите отбори">
@@ -106,12 +141,29 @@ class App extends Component {
                         </Page>
                     )}/>
                     <Route path="/send-message" render={() => (
-                        <Page title="Изпращане на лично съобщение">
-                            <SendMessage/>
-                        </Page>
+                        <div>
+                            <Header/>
+                            <Page title="Изпращане на лично съобщение">
+
+                                <SendMessage/>
+                            </Page>
+                        </div>
+                    )}/>
+                    <Route path="/sport-all/:currentSport" component={ViewAllSports}/>
+                    <Route path="/team-preview/:teamName" component={TeamPreview}/>
+                    <Route path="/logged" render={() => (
+                        <div>
+                            <Header/>
+                            <Page>
+                                <LandingPage/>
+                            </Page>
+                        </div>
                     )}/>
                     <Route path="/" render={() => (
-                        <Page><LandingPage/></Page>
+                        <Page>
+                            <HeaderForLoginUsers/>
+                            <LandingPage/>
+                        </Page>
                     )}/>
                 </Switch>
                 <Footer />

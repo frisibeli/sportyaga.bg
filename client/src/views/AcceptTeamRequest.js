@@ -36,7 +36,7 @@ const AcceptTeamRequest = props => {
                                             <span className="title">{teammate.name}</span>
                                             <br/>
                                             <button className="button is-primary">Профил</button>
-                                            <button className="button is-default">ЛС</button>
+                                            <Link className="button is-default" to={'/send-message'}>ЛС</Link>
                                         </p>
                                     </div>
                                 })}
@@ -58,7 +58,7 @@ const AcceptTeamRequest = props => {
                                             <span className="title">{request.name}</span>
                                             <br/>
                                             <button className="button is-primary">Профил</button>
-                                            <button className="button is-default">ЛС</button>
+                                            <Link className="button is-default" to={'/send-message'}>ЛС</Link>
 
                                             <button className="button is-primary margin">Одобри</button>
                                             <button className="button is-default">Отхвърли</button>

@@ -47,6 +47,7 @@ const LoginPage = props => (
                                         {/*<button className="button is-success is-outlined is-large is-fullwidth">Влез*/}
                                         {/*</button>*/}
                                         <Link className="button is-success is-outlined is-large is-fullwidth" onClick={props.login} to="/">Влез
+
                                         </Link>
                                     </p>
                                 </div>

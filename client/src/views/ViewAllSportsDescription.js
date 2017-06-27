@@ -1,12 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import viewallsports from '../styles/viewallsports.css';
-import ViewAllSportsDescription from '../views/ViewAllSportsDescription';
-import Multimedia from '../views/Multimedia';
-import {Link} from 'react-router-dom';
-import Page from '../components/Page';
-import Header from '../components/Header'
-const ViewAllSports = props => {
+
+const ViewAllSportsDescription = props => {
 	const sports = [
 		{name: "Айкидо", imgsrc: "aikido.jpeg", description: "Айкидо е съвременно японско бойно изкуство (гендай будо). Подобно на другите японски бойни изкуства, освен метод на самоотбрана, айкидо е и начин на духовно и физическо самоусъвършенстване. Името „айкидо“ се изписва с йероглифите „ай“ (съразмерност), „ки“ (енергия) и „до“ (път) и най-общо се превежда като „път на хармоничната сила“. Практикуващият айкидо се нарича айкидока. Освен това, в европейските езици се използва още айкидист. Айкидо е разработено от Морихей Уешиба (наричан от айкидистите О'Сенсей – „големият сенсей“) между 30-те и 60-те години на 20 век. В основата на айкидо залягат движения от древните школи Дайто-рю айки-джуцу и Иуама-рю кенджуцу, в които Уешиба се обучава като млад."},
 		{name: "Аеробика", imgsrc: "aerobika.jpg", description: "Аеробиката или аеробните упражнения[1], наричани още кардио (от англ. cardio, което е съкратено от cardiovascular – сърдечносъдов), е комплекс от физически упражнения, които обикновено се изпълняват на фона на музика.Тя тренира и увеличава силата, мощността, гъвкавостта и координираността. Аеробиката е много популярна сред жените, които я практикуват на групи или пред телевизора."},
@@ -23,38 +19,12 @@ const ViewAllSports = props => {
 	];
 
 	return (
-	<div>
-	<Header/>
-    <Page title="Преглед на всички спортове">
-
     <div>
-		<div >
-			<Link to={'/adding-sport'} className="button is-primary">Добавяне на нов спорт</Link>
-		</div>
-		{/*<center><h1> Преглед на всички видове спорт </h1></center>*/}
-	<table>
-		<tr>
-			<td width="400">
-				<ul>
-					{sports.map((sport, i) => {
-						return (
-
-						<li>
-                            <Link to={'/sport-all/'+i}>
-                                {sport.name}
-                            </Link>
-                        </li>
-					)})}
-				</ul>
-			</td>
-            <td>
-                <ViewAllSportsDescription sport={props.match.params.currentSport}/>
-                <Multimedia sport={props.match.params.currentSport}/>
-            </td>
-		</tr>
-	</table>
-	</div></Page>
+	    <img src={require('../images/' + sports[props.sport].imgsrc)}  />
+	    <h3>{sports[props.sport].description}</h3>
 	</div>
+
+
 )};
 
-export default ViewAllSports;
+export default ViewAllSportsDescription;

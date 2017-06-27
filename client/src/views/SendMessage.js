@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+
 import PropTypes from 'prop-types'
 
 const SendMessage = props => (
@@ -11,7 +13,8 @@ const SendMessage = props => (
                                 <p className="control">
                                     <textarea style={{height: "300px", width: "100%"}} disabled="disabled"></textarea>
                                     <input className="input" type="input"/>
-                                    <button className="button is-primary">Изпрати</button>
+                                    <Link className="button is-primary" to={'/team-preview/Валетата'}>Изпрати</Link>
+                                    <Link className="button is-primary" to={'/team-preview/Валетата'} >Назад</Link>
 
                                 </p>
                             </div>

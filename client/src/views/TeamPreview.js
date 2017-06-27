@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types'
 import '../styles/teamPreview.css';
 import Page from '../components/Page';
+import Header from '../components/Header';
 const propTypes = {};
 
 const defaultProps = {};
@@ -16,6 +17,7 @@ const TeamPreview = props => {
     return (
 
         <div>
+            <Header/>
             <Page title="Преглед на отбор">
                 {console.log(this.context)}
                 {props.match.params.teamName}
@@ -34,7 +36,8 @@ const TeamPreview = props => {
                                                 <span className="title">{teammate.name}</span>
                                                 <br/>
                                                 <button className="button is-primary">Профил</button>
-                                                <button className="button is-default">ЛС</button>
+                                                <Link className="button is-default" to={'/send-message'}>ЛС</Link>
+                                                {/*<button className="button is-default">ЛС</button>*/}
                                             </p>
                                         </div>
                                     })}
@@ -73,7 +76,7 @@ const TeamPreview = props => {
                                         <Link className="button is-active medium" to="/team-all">Получени покани
                                         </Link>
                                         <br/>
-                                        <Link className="button is-active medium" to="/join-team">Изпрати покана
+                                        <Link className="button is-active medium" to="/view-join-team">Изпрати покана
                                         </Link>
                                         <br/>
                                         <button className="button is-active medium" disabled="disabled">Адрес на терена
@@ -89,6 +92,8 @@ const TeamPreview = props => {
                     </fieldset>
                 </div>
             </Page>
+            {/*<Link to="/my-teams" className="button">Назад</Link>*/}
+
         </div>
     )
 };

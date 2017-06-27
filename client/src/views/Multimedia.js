@@ -16,30 +16,18 @@ const Multimedia = props => {
 		{name: "Колоездене", video: "https://www.youtube.com/embed/ZgPZyDe6Utg"},
 		{name: "Фехтовка", video: "https://www.youtube.com/embed/65Y7dvQAc08"},
 		{name: "Футбол", video: "https://www.youtube.com/embed/Sl-_NuDxiFQ"},
-	]
+	];
+	// let video = sports[props.sport];
 	return (
     <div>
 		<center><h1> Преглед на мултимедия </h1></center>
-	<table>
-		<tr>
-			<td width="400">
-				<ul>
-					{sports.map((sport, i) => {
-						return (
-						<li><a onClick={() => myFunction(sport.name)}> {sport.name} </a></li>
-					)})}
-				</ul>
-			</td>
-			<td>
-				<object width="420" height="315" data="https://www.youtube.com/embed/Sl-_NuDxiFQ"></object>
-			</td>
-		</tr>
-	</table>
+		<div>
+			<object width="420" height="315" data={sports[props.sport].video}/>
+		</div>
+
 	</div>
 	
 	
 )};
-function myFunction(name){
-		alert(name);	
-	}
+
 export default Multimedia;
