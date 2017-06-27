@@ -24,7 +24,7 @@ const ViewAllSports = props => {
 
 	return (
 	<div>
-	<Header/>
+	{/*<Header/>*/}
     <Page title="Преглед на всички спортове">
 
     <div>

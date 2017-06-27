@@ -17,7 +17,7 @@ const TeamPreview = props => {
     return (
 
         <div>
-            <Header/>
+            {/*<Header/>*/}
             <Page title="Преглед на отбор">
                 {console.log(this.context)}
                 {props.match.params.teamName}

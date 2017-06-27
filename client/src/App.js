@@ -53,7 +53,7 @@ class App extends Component {
                     )}/>
                     <Route path="/register" render={() => (
                         <div>
-                            <HeaderForLoginUsers/>
+                            {/*<HeaderForLoginUsers/>*/}
                             <Page>
                                 <RegisterPage/>
                             </Page>
@@ -68,7 +68,7 @@ class App extends Component {
 
                     <Route path="/sport-preview" render={() => (
                         <div>
-                            <Header/>
+                            {/*<Header/>*/}
                             <Page title="Преглед на спорт" leftColumn={require('./images/aikido.jpeg')}>
                                 <SportPreview/>
                             </Page>
@@ -77,7 +77,7 @@ class App extends Component {
 
                     <Route path="/team-all" render={() => (
                         <div>
-                            <Header/>
+                            {/*<Header/>*/}
                             <Page title="Преглед на всички отбори" leftColumn={require('./images/1.jpg')}>
                                 <AllTeams/>
                             </Page>
@@ -85,7 +85,7 @@ class App extends Component {
                     )}/>
                     <Route path="/team-create" render={() => (
                         <div>
-                            <Header/>
+                            {/*<Header/>*/}
                             <Page title="Създаване на отбор" leftColumn={require('./images/basketball.jpg')}>
                                 <CreateTeam/>
                             </Page>
@@ -93,7 +93,7 @@ class App extends Component {
                     )}/>
                     <Route path="/join-team" render={() => (
                         <div>
-                            <Header/>
+                            {/*<Header/>*/}
                             <Page title="Заявка за присъединяване на отбор"
                                   leftColumn={require('./images/basketball.jpg')}>
                                 <TeamJoinRequest/>
@@ -102,7 +102,7 @@ class App extends Component {
                     )}/>
                     <Route path="/accept-team" render={() => (
                         <div>
-                            <Header/>
+                            {/*<Header/>*/}
                             <Page title="Одобряване на нов участник в отбора">
                                 <AcceptTeamRequest/>
                             </Page>
@@ -111,7 +111,7 @@ class App extends Component {
 
                     <Route path="/adding-sport" render={() => (
                         <div>
-                            <Header/>
+                            {/*<Header/>*/}
                             <Page title="Заявка за добавяне на отбор" leftColumn={require('./images/upload1.JPG')}>
                                 <AddingSport/>
                             </Page>
@@ -119,7 +119,7 @@ class App extends Component {
                     )}/>
                     <Route path="/view-join-team" render={() => (
                         <div>
-                            <Header/>
+                            {/*<Header/>*/}
                             <Page title="Преглед и присъединяване към отбор ">
 
                                 <ViewJoinTeam/>
@@ -128,7 +128,7 @@ class App extends Component {
                     )}/>
                     <Route path="/sport-search" render={() => (
                         <div>
-                            <Header/>
+                            {/*<Header/>*/}
                             <Page title="Търсене на спорт">
 
                                 <SportSearch/>
@@ -142,7 +142,7 @@ class App extends Component {
                     )}/>
                     <Route path="/send-message" render={() => (
                         <div>
-                            <Header/>
+                            {/*<Header/>*/}
                             <Page title="Изпращане на лично съобщение">
 
                                 <SendMessage/>
@@ -153,7 +153,7 @@ class App extends Component {
                     <Route path="/team-preview/:teamName" component={TeamPreview}/>
                     <Route path="/logged" render={() => (
                         <div>
-                            <Header/>
+                            {/*<Header/>*/}
                             <Page>
                                 <LandingPage/>
                             </Page>
@@ -161,7 +161,7 @@ class App extends Component {
                     )}/>
                     <Route path="/" render={() => (
                         <Page>
-                            <HeaderForLoginUsers/>
+                            {/*<HeaderForLoginUsers/>*/}
                             <LandingPage/>
                         </Page>
                     )}/>
