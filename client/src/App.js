@@ -52,7 +52,6 @@ class App extends Component {
 
                     )}/>
                     <Route path="/register" render={() => (
-            
                             <Page>
                                 <RegisterPage/>
                             </Page>
@@ -64,53 +63,45 @@ class App extends Component {
                     )}/>
 
                     <Route path="/sport-preview" render={() => (
-            
                             <Page title="Преглед на спорт" leftColumn={require('./images/aikido.jpeg')}>
                                 <SportPreview/>
                             </Page>
                     )}/>
 
                     <Route path="/team-all" render={() => (
-            
                             <Page title="Преглед на всички отбори" leftColumn={require('./images/1.jpg')}>
                                 <AllTeams/>
                             </Page>
                     )}/>
                     <Route path="/team-create" render={() => (
-            
                             <Page title="Създаване на отбор" leftColumn={require('./images/basketball.jpg')}>
                                 <CreateTeam/>
                             </Page>
                     )}/>
                     <Route path="/join-team" render={() => (
-            
                             <Page title="Заявка за присъединяване на отбор"
                                   leftColumn={require('./images/basketball.jpg')}>
                                 <TeamJoinRequest/>
                             </Page>
                     )}/>
                     <Route path="/accept-team" render={() => (
-            
                             <Page title="Одобряване на нов участник в отбора">
                                 <AcceptTeamRequest/>
                             </Page>
                     )}/>
 
                     <Route path="/adding-sport" render={() => (
-            
                             <Page title="Заявка за добавяне на отбор" leftColumn={require('./images/upload1.JPG')}>
                                 <AddingSport/>
                             </Page>
                     )}/>
                     <Route path="/view-join-team" render={() => (
-            
                             <Page title="Преглед и присъединяване към отбор ">
 
                                 <ViewJoinTeam/>
                             </Page>
                     )}/>
                     <Route path="/sport-search" render={() => (
-            
                             <Page title="Търсене на спорт">
 
                                 <SportSearch/>
@@ -122,7 +113,6 @@ class App extends Component {
                         </Page>
                     )}/>
                     <Route path="/send-message" render={() => (
-            
                             <Page title="Изпращане на лично съобщение">
 
                                 <SendMessage/>
@@ -131,7 +121,6 @@ class App extends Component {
                     <Route path="/sport-all/:currentSport" component={ViewAllSports}/>
                     <Route path="/team-preview/:teamName" component={TeamPreview}/>
                     <Route path="/logged" render={() => (
-            
                             <Page>
                                 <LandingPage/>
                             </Page>
