@@ -52,88 +52,60 @@ class App extends Component {
 
                     )}/>
                     <Route path="/register" render={() => (
-                        <div>
-                            {/*<HeaderForLoginUsers/>*/}
                             <Page>
                                 <RegisterPage/>
                             </Page>
-                        </div>
                     )}/>
 
                     <Route path="/forgotten-password" render={() => (
-                        <div>
+            
                             <Page><ForgottenPasswordPage/></Page>
-                        </div>
                     )}/>
 
                     <Route path="/sport-preview" render={() => (
-                        <div>
-                            {/*<Header/>*/}
                             <Page title="Преглед на спорт" leftColumn={require('./images/aikido.jpeg')}>
                                 <SportPreview/>
                             </Page>
-                        </div>
                     )}/>
 
                     <Route path="/team-all" render={() => (
-                        <div>
-                            {/*<Header/>*/}
                             <Page title="Преглед на всички отбори" leftColumn={require('./images/1.jpg')}>
                                 <AllTeams/>
                             </Page>
-                        </div>
                     )}/>
                     <Route path="/team-create" render={() => (
-                        <div>
-                            {/*<Header/>*/}
                             <Page title="Създаване на отбор" leftColumn={require('./images/basketball.jpg')}>
                                 <CreateTeam/>
                             </Page>
-                        </div>
                     )}/>
                     <Route path="/join-team" render={() => (
-                        <div>
-                            {/*<Header/>*/}
                             <Page title="Заявка за присъединяване на отбор"
                                   leftColumn={require('./images/basketball.jpg')}>
                                 <TeamJoinRequest/>
                             </Page>
-                        </div>
                     )}/>
                     <Route path="/accept-team" render={() => (
-                        <div>
-                            {/*<Header/>*/}
                             <Page title="Одобряване на нов участник в отбора">
                                 <AcceptTeamRequest/>
                             </Page>
-                        </div>
                     )}/>
 
                     <Route path="/adding-sport" render={() => (
-                        <div>
-                            {/*<Header/>*/}
                             <Page title="Заявка за добавяне на отбор" leftColumn={require('./images/upload1.JPG')}>
                                 <AddingSport/>
                             </Page>
-                        </div>
                     )}/>
                     <Route path="/view-join-team" render={() => (
-                        <div>
-                            {/*<Header/>*/}
                             <Page title="Преглед и присъединяване към отбор ">
 
                                 <ViewJoinTeam/>
                             </Page>
-                        </div>
                     )}/>
                     <Route path="/sport-search" render={() => (
-                        <div>
-                            {/*<Header/>*/}
                             <Page title="Търсене на спорт">
 
                                 <SportSearch/>
                             </Page>
-                        </div>
                     )}/>
                     <Route path="/my-teams" render={() => (
                         <Page title="Преглед на моите отбори">
@@ -141,35 +113,27 @@ class App extends Component {
                         </Page>
                     )}/>
                     <Route path="/send-message" render={() => (
-                        <div>
-                            {/*<Header/>*/}
                             <Page title="Изпращане на лично съобщение">
 
                                 <SendMessage/>
                             </Page>
-                        </div>
                     )}/>
                     <Route path="/sport-all/:currentSport" component={ViewAllSports}/>
                     <Route path="/team-preview/:teamName" component={TeamPreview}/>
                     <Route path="/logged" render={() => (
-                        <div>
-                            {/*<Header/>*/}
                             <Page>
                                 <LandingPage/>
                             </Page>
-                        </div>
                     )}/>
                     <Route path="/" render={() => (
                         <Page>
-                            {/*<HeaderForLoginUsers/>*/}
                             <LandingPage/>
                         </Page>
                     )}/>
                 </Switch>
                 <Footer />
             </div>
-        )
-            ;
+        );
     }
 
 }
