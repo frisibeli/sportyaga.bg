@@ -10,9 +10,9 @@ const defaultProps = {};
 
 const TeamPreview = props => {
     const teammates = [
-        {name: "Бай Пешо"},
-        {name: "Маняка"},
-        {name: "Лудия"}
+        {teamId: "1",name: "Бай Пешо"},
+        {teamId: "1",name: "Маняка"},
+        {teamId: "1",name: "Лудия"}
     ];
     return (
 
