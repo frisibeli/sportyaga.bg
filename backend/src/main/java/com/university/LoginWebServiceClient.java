@@ -22,11 +22,12 @@ public class LoginWebServiceClient  extends WebServiceGatewaySupport {
         this.webServiceTemplate = initializeWebService();
     }
 
-    public AuthenticateUserResponse authenticateUser(String username, String password) {
-        AuthenticateUser request = new AuthenticateUser();
-        request.setPassword(password);
-        request.setUserName(username);
-        AuthenticateUserResponse authenticateUserResponse = (AuthenticateUserResponse) this.webServiceTemplate.marshalSendAndReceive("http://localhost:5088/LoginWebService.asmx", request, new SoapActionCallback("http://localhost:5088/AuthenticateUser"));
-        return authenticateUserResponse;
-    }
+//    public AuthenticateUserResponse authenticateUser(String username, String password) {
+//        AuthenticateUser request = new AuthenticateUser();
+//        request.setPassword(password);
+//        request.setUserName(username);
+//        AuthenticateUserResponse authenticateUserResponse = (AuthenticateUserResponse) this.webServiceTemplate.marshalSendAndReceive("http://localhost:5088/LoginWebService.asmx", request, new SoapActionCallback("http://localhost:5088/AuthenticateUser"));
+//        return authenticateUserResponse;
+//    }
+
 }

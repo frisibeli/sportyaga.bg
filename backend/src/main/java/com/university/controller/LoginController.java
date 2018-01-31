@@ -1,6 +1,6 @@
 package com.university.controller;
 
-import com.university.AuthenticateUserResponse;
+//import com.university.AuthenticateUserResponse;
 import com.university.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -21,7 +21,7 @@ public class LoginController {
     }
 
     @RequestMapping(produces = "application/json", method = RequestMethod.GET, value = "/authenticate/{user}/{password}")
-    public ResponseEntity<AuthenticateUserResponse> authenticateUser(@PathVariable(value = "user") String user, @PathVariable(value = "password") String password) throws Exception {
+    public ResponseEntity<String> authenticateUser(@PathVariable(value = "user") String user, @PathVariable(value = "password") String password) throws Exception {
         return new ResponseEntity<>(this.loginService.authenticateUser(user, password), HttpStatus.OK);
     }
 
