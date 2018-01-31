@@ -16,7 +16,7 @@ import TeamJoinRequest from './views/TeamJoinRequest';
 import SportSearch from './views/SportSearch';
 import TeamPreview from './views/TeamPreview';
 import AcceptTeamRequest from './views/AcceptTeamRequest';
-import CreateTeam from './views/CreateTeam';
+import CreateTeam from './containers/CreateTeamContainer';
 import SendMessage from './views/SendMessage'
 import AddingSport from './views/AddingSport';
 import ForgottenPasswordPage from './views/ForgottenPasswordPage';
@@ -72,9 +72,9 @@ class App extends Component {
                                 <AllTeams/>
                             </Page>
                     )}/>
-                    <Route path="/team-create" render={() => (
+                    <Route path="/team-create" render={(props) => (
                             <Page title="Създаване на отбор" leftColumn={require('./images/basketball.jpg')}>
-                                <CreateTeam/>
+                                <CreateTeam {...props}/>
                             </Page>
                     )}/>
                     <Route path="/join-team" render={() => (
