@@ -14,6 +14,7 @@ class RegistrationContainer extends Component {
     }
 
 
+    
 
     render() {
         return <RegisterPage  />
