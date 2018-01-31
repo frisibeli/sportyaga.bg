@@ -6,21 +6,17 @@ import Page from '../components/Page';
 import Header from '../components/Header';
 const propTypes = {};
 
-const defaultProps = {};
+const defaultProps = {
+    team:{
+        players:[]
+    }
+};
 
-const TeamPreview = props => {
-    const teammates = [
-        {teamId: "1",name: "Бай Пешо"},
-        {teamId: "1",name: "Маняка"},
-        {teamId: "1",name: "Лудия"}
-    ];
+const TeamPreview = ({team}) => {
     return (
-
         <div>
-            {/*<Header/>*/}
             <Page title="Преглед на отбор">
-                {console.log(this.context)}
-                {props.match.params.teamName}
+                {team.name}
                 <hr/>
                 <div className="columns">
                     <fieldset className="FormField">
@@ -28,7 +24,7 @@ const TeamPreview = props => {
                         <div className="column is-14 board" id="b4">
                             <div className="box is-gray">
                                 <div className="items">
-                                    {teammates.map((teammate, i) => {
+                                    {team.players.map((teammate, i) => {
                                         return <div className="box" key={i}>
                                             <p className="meta">
                                                 <img src={require('../images/user.png')} className="small"
@@ -37,7 +33,6 @@ const TeamPreview = props => {
                                                 <br/>
                                                 <button className="button is-primary">Профил</button>
                                                 <Link className="button is-default" to={'/send-message'}>ЛС</Link>
-                                                {/*<button className="button is-default">ЛС</button>*/}
                                             </p>
                                         </div>
                                     })}
@@ -92,7 +87,6 @@ const TeamPreview = props => {
                     </fieldset>
                 </div>
             </Page>
-            {/*<Link to="/my-teams" className="button">Назад</Link>*/}
 
         </div>
     )
