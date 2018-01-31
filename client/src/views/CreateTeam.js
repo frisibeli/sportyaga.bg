@@ -46,12 +46,10 @@ const CreateTeam = props => {
             </div>
 
             <p className="control">
-                <Link className="button is-active" to="/team-all">Откажи създаване
-                </Link>
+                <Link className="button is-active" to="/team-all">Откажи създаване</Link>
                 {/* <Link className="button is-active margin" to="/team-all">Създай отбор
                 </Link> */}
                 {/* <button className="button is-active">Откажи създаване</button> */}
-
                 <button className="button is-active margin" onClick={() => { createTeam(teamName, sportId, maxPlayers, description) }}>Създай отбор</button>
             </p>
         </div>

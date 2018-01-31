@@ -1,5 +1,4 @@
-var crypto = require('crypto'),
-    sha1 = require("sha1");
+   var sha1 = require('sha1');
 /**
  * SportController
  *

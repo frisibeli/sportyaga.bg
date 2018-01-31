@@ -2,6 +2,8 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 const RegisterPage = props => (
+
+
     <div>
         <section className="hero is-fullheight is-dark is-bold">
             <div className="hero-body">
