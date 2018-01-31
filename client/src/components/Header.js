@@ -20,7 +20,7 @@ const Header = props => (
                 <Link exact className="nav-item is-tab" activeClassName="is-active" to="/">
                     Начало
                 </Link>
-                <Link className="nav-item is-tab" activeClassName="is-active" to="/sport-search">
+                <Link className="nav-item is-tab" activeClassName="is-active" to="/team-all">
                     Търсене на отбор
                 </Link>
                 <Link className="nav-item is-tab" activeClassName="is-active" to="/team-create">
