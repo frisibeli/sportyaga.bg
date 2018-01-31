@@ -21,7 +21,7 @@ import SendMessage from './views/SendMessage'
 import AddingSport from './views/AddingSport';
 import ForgottenPasswordPage from './views/ForgottenPasswordPage';
 import ViewAllSports from './views/ViewAllSports';
-import AllTeams from './views/AllTeams';
+import AllTeams from './containers/AllTeamsContainer';
 import MyTeams from './views/MyTeams';
 import ViewJoinTeam from './views/ViewJoinTeam';
 class App extends Component {
@@ -42,7 +42,6 @@ class App extends Component {
     }
 
     render() {
-        document.title = 'Sportyaga';
         return (
             <div>
                 <Header authorized={this.state.authorized} logout={this.logout} />
