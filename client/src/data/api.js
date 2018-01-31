@@ -19,7 +19,11 @@ class Sport {
     }
 }
 
-class Registration {
+class Auth {
+    static login(email, password){
+        return axios.post(`${API_URL}/login`, { email, password });
+    }
+
     static register(email, name, password) {
         return axios.post(`${API_URL}/register`, { email, name, password });
     }
@@ -27,5 +31,6 @@ class Registration {
 
 export {
     Team,
-    Sport
+    Sport,
+    Auth
 }

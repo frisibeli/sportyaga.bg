@@ -10,7 +10,7 @@ import Page from './components/Page';
 
 import LandingPage from './views/LandingPage';
 import RegisterPage from './views/RegisterPage';
-import LoginPage from './views/LoginPage';
+import LoginPage from './containers/LoginContainer';
 import SportPreview from './views/SportPreview';
 import TeamJoinRequest from './views/TeamJoinRequest';
 import SportSearch from './views/SportSearch';

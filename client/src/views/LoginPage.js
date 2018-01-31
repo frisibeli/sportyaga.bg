@@ -1,7 +1,10 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import '../styles/login.css';
-const LoginPage = props => (
+const LoginPage = props => {
+    let email = "";
+    let password = "";
+    return(
     <div className="login-wrapper columns">
         <div className="column is-8 is-hidden-mobile hero-banner">
             <section className="hero is-fullheight is-dark">
@@ -31,14 +34,14 @@ const LoginPage = props => (
                             <div className="column is-8 is-offset-2">
                                 <div className="login-form">
                                     <p className="control has-icon has-icon-right">
-                                        <input className="input email-input" type="text"
+                                        <input onChange={(e)=>email=e.target.value} className="input email-input" type="text"
                                                placeholder="jsmith@example.org"/>
                                         <span className="icon user">
                       <i className="fa fa-user"></i>
                     </span>
                                     </p>
                                     <p className="control has-icon has-icon-right">
-                                        <input className="input password-input" type="password" placeholder="●●●●●●●"/>
+                                        <input onChange={(e)=>password=e.target.value} className="input password-input" type="password" placeholder="●●●●●●●"/>
                                         <span className="icon user">
                       <i className="fa fa-lock"></i>
                     </span>
@@ -46,9 +49,12 @@ const LoginPage = props => (
                                     <p className="control login">
                                         {/*<button className="button is-success is-outlined is-large is-fullwidth">Влез*/}
                                         {/*</button>*/}
-                                        <Link className="button is-success is-outlined is-large is-fullwidth" onClick={props.login} to="/">Влез
+                                        <button onClick={()=>{props.login(email, password)}} className="button is-success is-outlined is-large is-fullwidth">
+                                            Влез
+                                        </button>
+                                        {/* <Link className="button is-success is-outlined is-large is-fullwidth" onClick={props.login} to="/">Влез
 
-                                        </Link>
+                                        </Link> */}
                                     </p>
                                 </div>
                                 <div className="section forgot-password">
@@ -64,6 +70,7 @@ const LoginPage = props => (
             </section>
         </div>
     </div>
-);
+    )
+};
 
 export default LoginPage;
