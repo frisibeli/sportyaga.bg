@@ -14,7 +14,7 @@ import LoginPage from './views/LoginPage';
 import SportPreview from './views/SportPreview';
 import TeamJoinRequest from './views/TeamJoinRequest';
 import SportSearch from './views/SportSearch';
-import TeamPreview from './views/TeamPreview';
+import TeamPreview from './containers/TeamPreviewContainer';
 import AcceptTeamRequest from './views/AcceptTeamRequest';
 import CreateTeam from './views/CreateTeam';
 import SendMessage from './views/SendMessage'
@@ -118,7 +118,7 @@ class App extends Component {
                             </Page>
                     )}/>
                     <Route path="/sport-all/:currentSport" component={ViewAllSports}/>
-                    <Route path="/team-preview/:teamName" component={TeamPreview}/>
+                    <Route path="/team-preview/:teamId" component={TeamPreview}/>
                     <Route path="/logged" render={() => (
                             <Page>
                                 <LandingPage/>

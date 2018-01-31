@@ -4,17 +4,6 @@ import PropTypes from 'prop-types'
 import '../styles/allteams.css'
 
 const AllTeams = ({teams}) => {
-	const teams1 = [
-        {teamId:"1",name: "Машините", players:10, searchingFor:"нападател", advanced:true, teammates: [{teamId:"1",name:"Цецо"},{teamId:"1",name:"Пешо"}]},
-        {teamId:"2",name: "Валетата", players:4, searchingFor:"либеро", advanced:false, teammates: [{teamId:"2",name:"Цецо"},{teamId:"2",name:"Пешо"}]},
-        {teamId:"3",name: "Дамите", players:8, searchingFor:"разпределител", advanced:true, teammates: [{teamId:"3",name:"Цецо"},{teamId:"3",name:"Пешо"}]},
-        {teamId:"4",name: "Гардеробите", players:7, searchingFor:"нападател", advanced:false, teammates: [{teamId:"4",name:"Цецо"},{teamId:"4",name:"Пешо"}]},
-        {teamId:"5",name: "Ретро", players:9, searchingFor:"разпределител", advanced:false, teammates: [{teamId:"5",name:"Цецо"},{teamId:"5",name:"Пешо"}]},
-        {teamId:"6",name: "Нежните", players:3, searchingFor:"диагонал", advanced:true, teammates: [{teamId:"6",name:"Цецо"},{teamId:"6",name:"Пешо"}]},
-        {teamId:"7",name: "Кавалерия", players:5, searchingFor:"либеро", advanced:false, teammates: [{teamId:"7",name:"Цецо"},{teamId:"7",name:"Пешо"}]},
-        {teamId:"8",name: "Спокойните", players:7, searchingFor:"център", advanced:false, teammates: [{teamId:"8",name:"Цецо"},{teamId:"8",name:"Пешо"}]},
-        {teamId:"9",name: "Лексис", players:11, searchingFor:"нападател", advanced:true, teammates: [{teamId:"9",name:"Цецо"},{teamId:"9",name:"Пешо"}]}
-	];
 	return (
     <div>
        <table>
@@ -30,7 +19,7 @@ const AllTeams = ({teams}) => {
             		<td></td>
             		<td>{team.players.length}/{team.maxPlayers}</td>
             		<td>{team.sport.name}</td>
-            		<td><Link className="button " to={'/team-preview/'+team.name} params={{Pesho:"pesho"}}>Преглед</Link></td>
+            		<td><Link className="button" to={'/team-preview/'+team.id}>Преглед</Link></td>
             	</tr>
             )}
             </thead>
