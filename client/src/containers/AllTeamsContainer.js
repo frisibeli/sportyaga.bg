@@ -10,17 +10,19 @@ const defaultProps = {};
 class AllTeamsContainer extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            teams: []
+        };
     }
 
     componentDidMount(){
-        Team.getAll().then(data => {
-            console.log(data)
+        Team.getAll().then(({data}) => {
+            this.setState({teams:data})
         })
     }
 
     render() {
-        return <AllTeams />
+        return <AllTeams teams={this.state.teams} />
     }
 }
 
