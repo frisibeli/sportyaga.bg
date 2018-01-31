@@ -9,8 +9,8 @@ import Footer from './components/Footer';
 import Page from './components/Page';
 
 import LandingPage from './views/LandingPage';
-import RegisterPage from './views/RegisterPage';
 import LoginPage from './containers/LoginContainer';
+import RegisterPage from './containers/RegistrationContainer';
 import SportPreview from './views/SportPreview';
 import TeamJoinRequest from './views/TeamJoinRequest';
 import SportSearch from './views/SportSearch';
@@ -50,9 +50,9 @@ class App extends Component {
                         <Page><LoginPage login={this.login}/></Page>
 
                     )}/>
-                    <Route path="/register" render={() => (
+                    <Route path="/register" render={(props) => (
                             <Page>
-                                <RegisterPage/>
+                                <RegisterPage {...props}/>
                             </Page>
                     )}/>
 

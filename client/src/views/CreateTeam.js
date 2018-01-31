@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../styles/createTeam.css';
 import { Link } from 'react-router-dom';
+
 const propTypes = {};
 const defaultProps = {};
-
 
 const CreateTeam = props => {
     const { sports, createTeam } = props;
@@ -35,8 +35,8 @@ const CreateTeam = props => {
                     <input type="number" className="input inputLength" placeholder="Максимален брой играчи" onChange={(e) => { maxPlayers = e.target.value }} />
                 </p>
 
-                <select onChange={(e) => { sportId = e.target.value }} >
-                 <option>Избер на спорт</option>
+                <select className="select" onChange={(e) => { sportId = e.target.value }} >
+                 <option>Избор на спорт</option>
                     {sports.map((sport, i) => {
                         return <option value={sport.id} key={i}>{sport.name}</option>
                     })}
