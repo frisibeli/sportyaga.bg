@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../styles/createTeam.css';
 import { Link } from 'react-router-dom';
+
 const propTypes = {};
 const defaultProps = {};
-
 
 const CreateTeam = props => {
     const { sports, createTeam } = props;

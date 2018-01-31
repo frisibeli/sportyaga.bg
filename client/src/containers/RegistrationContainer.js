@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import RegisterPage from '../views/RegisterPage'
-import { Sport, Team } from '../data/api'
+import { Auth } from '../data/api'
 
 const propTypes = {};
 const defaultProps = {};
@@ -9,20 +9,28 @@ const defaultProps = {};
 class RegistrationContainer extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-        };
+        this.register = this.register.bind(this);
     }
 
-
-    
+    register(email, name, password, repeatPass) {
+        if (password === repeatPass) {
+            Auth.register(email, name, password).then((response) => {
+                this.props.history.push('/');
+            }).catch(error => {
+                alert("Registration failed")
+            })
+        } else {
+            alert('The passwords your entered are not the same.')
+        }
+    }
 
     render() {
-        return <RegisterPage  />
+        return <RegisterPage register={this.register} />
     }
 }
 
-Registration.propTypes = propTypes;
+RegistrationContainer.propTypes = propTypes;
 
-Registration.defaultProps = defaultProps;
+RegistrationContainer.defaultProps = defaultProps;
 
 export default RegistrationContainer;
