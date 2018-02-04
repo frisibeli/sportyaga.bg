@@ -7,12 +7,6 @@
     <groupId>groupId</groupId>
     <artifactId>backend</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.4.3.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -21,20 +15,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.ws</groupId>
-            <artifactId>spring-ws-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
         <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-io -->
         <dependency>
             <groupId>commons-codec</groupId>
@@ -47,46 +27,9 @@
             <artifactId>commons-io</artifactId>
             <version>2.5</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.25</version>
-        </dependency>
-
 
 
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <!--<plugin>-->
-                <!--<groupId>org.jvnet.jaxb2.maven2</groupId>-->
-                <!--<artifactId>maven-jaxb2-plugin</artifactId>-->
-                <!--<version>0.13.1</version>-->
-                <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<goals>-->
-                            <!--<goal>generate</goal>-->
-                        <!--</goals>-->
-                    <!--</execution>-->
-                <!--</executions>-->
-                <!--<configuration>-->
-                    <!--<schemaLanguage>WSDL</schemaLanguage>-->
-                    <!--<generatePackage>com.university</generatePackage>-->
-                    <!--<schemas>-->
-                        <!--<schema>-->
-                            <!--<url>http://localhost:5088/LoginWebService.asmx?wsdl</url>-->
-                        <!--</schema>-->
-                    <!--</schemas>-->
-                <!--</configuration>-->
-            <!--</plugin>-->
-        </plugins>
-    </build>
 
     
 </project>
