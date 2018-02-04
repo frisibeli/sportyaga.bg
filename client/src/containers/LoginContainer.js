@@ -1,35 +1,33 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import TeamPreview from '../views/TeamPreview'
-import {Team} from '../data/api'
+import LoginPage from '../views/LoginPage'
+import {Auth} from '../data/api'
 
 const propTypes = {};
 
 const defaultProps = {};
 
-class TeamPreviewContainer extends Component {
+class LoginContainer extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            team: {
-                players:[]
-            }
-        };
+        this.login = this.login.bind(this);
     }
 
-    componentDidMount(){
-        Team.get(this.props.match.params.teamId).then(({data}) => {
-            this.setState({team:data})
+    login(email, password){
+        Auth.login(email, password).then(({data}) => {
+            alert(data.id)
+        }).catch(error => {
+            alert('Incorrect credentials');
         })
     }
 
     render() {
-        return <TeamPreview team={this.state.team} />
+        return <LoginPage login={this.login} />
     }
 }
 
-TeamPreviewContainer.propTypes = propTypes;
+LoginContainer.propTypes = propTypes;
 
-TeamPreviewContainer.defaultProps = defaultProps;
+LoginContainer.defaultProps = defaultProps;
 
-export default TeamPreviewContainer;
+export default LoginContainer;

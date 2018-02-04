@@ -1,5 +1,4 @@
-var crypto = require('crypto'),
-    sha1 = require("sha1");
+   var sha1 = require('sha1');
 /**
  * SportController
  *
@@ -11,8 +10,9 @@ module.exports = {
 	login: function(req, res){
         let email = req.body.email;
         let password = sha1(req.body.password);
-        User.find({email, password}).exec((err, user)=>{
-            res.json(user);
+        User.findOne({email, password}).exec((err, user)=>{
+            if(!user) res.status(404).json({error:true, message:"No such user found"})
+            else res.json(user);
         })
     },
     register: function(req, res){

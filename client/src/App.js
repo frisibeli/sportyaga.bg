@@ -9,14 +9,14 @@ import Footer from './components/Footer';
 import Page from './components/Page';
 
 import LandingPage from './views/LandingPage';
-import RegisterPage from './views/RegisterPage';
-import LoginPage from './views/LoginPage';
+import LoginPage from './containers/LoginContainer';
+import RegisterPage from './containers/RegistrationContainer';
 import SportPreview from './views/SportPreview';
 import TeamJoinRequest from './views/TeamJoinRequest';
 import SportSearch from './views/SportSearch';
 import TeamPreview from './containers/TeamPreviewContainer';
 import AcceptTeamRequest from './views/AcceptTeamRequest';
-import CreateTeam from './views/CreateTeam';
+import CreateTeam from './containers/CreateTeamContainer';
 import SendMessage from './views/SendMessage'
 import AddingSport from './views/AddingSport';
 import ForgottenPasswordPage from './views/ForgottenPasswordPage';
@@ -50,9 +50,9 @@ class App extends Component {
                         <Page><LoginPage login={this.login}/></Page>
 
                     )}/>
-                    <Route path="/register" render={() => (
+                    <Route path="/register" render={(props) => (
                             <Page>
-                                <RegisterPage/>
+                                <RegisterPage {...props}/>
                             </Page>
                     )}/>
 
@@ -72,9 +72,9 @@ class App extends Component {
                                 <AllTeams/>
                             </Page>
                     )}/>
-                    <Route path="/team-create" render={() => (
+                    <Route path="/team-create" render={(props) => (
                             <Page title="Създаване на отбор" leftColumn={require('./images/basketball.jpg')}>
-                                <CreateTeam/>
+                                <CreateTeam {...props}/>
                             </Page>
                     )}/>
                     <Route path="/join-team" render={() => (
