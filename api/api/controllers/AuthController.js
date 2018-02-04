@@ -10,6 +10,7 @@ module.exports = {
 	login: function(req, res){
         let email = req.body.email;
         let password = sha1(req.body.password);
+        console.log(req.body);
         User.findOne({email, password}).exec((err, user)=>{
             if(!user) res.status(404).json({error:true, message:"No such user found"})
             else res.json(user);
@@ -23,6 +24,6 @@ module.exports = {
             if(!err) res.json(user);
             else res.status(400).json(err);
         })
-    }   
+    }
 };
 

@@ -20,8 +20,8 @@ class Sport {
 }
 
 class Auth {
-    static login(email, password){
-        return axios.post(`${API_URL}/login`, { email, password });
+    static login(user, password){
+        return axios.get(`${API_URL}/login/authenticate/${user}/${password}`);
     }
 
     static register(email, name, password) {
