@@ -19,6 +19,10 @@
 
 module.exports.policies = {
 
+  'UserController': {
+    'me': ['isAuthorized']
+  },
+
   /***************************************************************************
   *                                                                          *
   * Default policy for all controllers and actions (`true` allows public     *

@@ -29,9 +29,9 @@ const Header = props => (
                 <Link className="nav-item is-tab" activeClassName="is-active" to="/my-teams">
                     Моите отбори
                 </Link>
-                <Link className="nav-item is-tab" activeClassName="is-active" to="/accept-team">
+                {/* <Link className="nav-item is-tab" activeClassName="is-active" to="/accept-team">
                     Известия(2)
-                </Link>
+                </Link> */}
                 </span>):<span></span>}
                 {!props.authorized?(
                 <span className="nav-item">
