@@ -21,7 +21,7 @@ public class LoginController {
     }
 
     @RequestMapping(produces = "application/json", method = RequestMethod.GET, value = "/authenticate/{user}/{password}")
-    public ResponseEntity<String> authenticateUser(@PathVariable(value = "user") String user, @PathVariable(value = "password") String password) throws Exception {
+    public ResponseEntity<?> authenticateUser(@PathVariable(value = "user") String user, @PathVariable(value = "password") String password) throws Exception {
         return new ResponseEntity<>(this.loginService.authenticateUser(user, password), HttpStatus.OK);
     }
 
