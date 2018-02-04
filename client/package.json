@@ -10,6 +10,7 @@
     "elemental": "^0.6.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-location-picker": "^1.0.1",
     "react-router-dom": "^4.1.1",
     "request": "^2.79.0"
   },

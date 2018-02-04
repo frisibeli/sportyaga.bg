@@ -18,6 +18,15 @@ module.exports = {
     maxPlayers:{
       type: 'integer'
     },
+    lat:{
+      type: 'float'
+    },
+    lng:{
+      type: 'float'
+    },
+    address:{
+      type: 'string'
+    },
     description:{
       type: 'string'
     },

@@ -8,8 +8,8 @@ class Team {
     static get(id) {
         return axios.get(`${API_URL}/team/${id}`)
     }
-    static createTeam(name, sport, maxPlayers, description) {
-        return axios.post(`${API_URL}/team`, { name, sport, maxPlayers, description });
+    static createTeam(name, sport, maxPlayers, description, lat, lng, address) {
+        return axios.post(`${API_URL}/team`, { name, sport, maxPlayers, description, lat, lng, address});
     }
 }
 

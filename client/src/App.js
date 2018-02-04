@@ -81,7 +81,7 @@ class App extends Component {
                             </Page>
                     )}/>
                     <Route path="/team-create" render={(props) => (
-                            <Page title="Създаване на отбор" leftColumn={require('./images/basketball.jpg')}>
+                            <Page title="Създаване на отбор">
                                 <CreateTeam {...props}/>
                             </Page>
                     )}/>
