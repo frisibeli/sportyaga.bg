@@ -7,15 +7,13 @@
 
 module.exports = {
 	me: function(req, res){
-    
-        User.findOne({email, password}).exec((err, user)=>{
-            //TODO: remove password from response            
+        console.log(req.token)
+        User.findOne({id:req.token.id}).populate('teams').exec((err, user)=>{          
             if(!user) res.status(404).json({error:true, message:"No such user found"})
             else {
                 delete user.password
                 res.json({
-                    user: user,
-                    token: jwToken.issue({id : user.id })
+                    ...user
                 });
             }
         })
