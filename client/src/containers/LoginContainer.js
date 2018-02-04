@@ -15,7 +15,11 @@ class LoginContainer extends Component {
 
     login(email, password){
         Auth.login(email, password).then(({data}) => {
-            alert(data.id)
+            let {user, token} = data;
+            localStorage.setItem('user', JSON.stringify(user));
+            localStorage.setItem('token', token);
+            this.props.login();
+            this.props.history.push('/')
         }).catch(error => {
             alert('Incorrect credentials');
         })

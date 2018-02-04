@@ -5,9 +5,9 @@ const Header = props => (
     <nav className="nav has-shadow" id="top">
         <div className="container">
             <div className="nav-left">
-                <a className="nav-item" href="../index.html">
+                <Link className="nav-item" to="/">
                     <img src={require('../images/logo.png')} alt="Description"/>
-                </a>
+                </Link>
             </div>
             <span className="nav-toggle">
                 <span></span>

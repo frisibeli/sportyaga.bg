@@ -5,6 +5,7 @@
   "description": "a Sails application",
   "keywords": [],
   "dependencies": {
+    "bcrypt": "^1.0.3",
     "crypto": "^1.0.1",
     "ejs": "2.3.4",
     "grunt": "1.0.1",
@@ -20,6 +21,7 @@
     "grunt-sails-linker": "~0.10.1",
     "grunt-sync": "0.5.2",
     "include-all": "^1.0.0",
+    "jsonwebtoken": "^8.1.1",
     "rc": "1.0.1",
     "sails": "~0.12.14",
     "sails-disk": "~0.10.9",

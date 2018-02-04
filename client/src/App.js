@@ -34,10 +34,20 @@ class App extends Component {
         this.logout = this.logout.bind(this);
     }
 
+    componentWillMount(){
+        if(localStorage.getItem("token") !== null){
+            this.setState({authorized:true});
+        }else{
+            this.setState({authorized:false});
+        }
+    }
+
     login(){
         this.setState({authorized:true});
     }
     logout(){
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
         this.setState({authorized:false});
     }
 
@@ -46,9 +56,8 @@ class App extends Component {
             <div>
                 <Header authorized={this.state.authorized} logout={this.logout} />
                 <Switch>
-                    <Route path="/login" render={() => (
-                        <Page><LoginPage login={this.login}/></Page>
-
+                    <Route path="/login" render={(props) => (
+                        <Page><LoginPage {...props} login={this.login}/></Page>
                     )}/>
                     <Route path="/register" render={(props) => (
                             <Page>
@@ -57,7 +66,6 @@ class App extends Component {
                     )}/>
 
                     <Route path="/forgotten-password" render={() => (
-            
                             <Page><ForgottenPasswordPage/></Page>
                     )}/>
 
@@ -126,7 +134,7 @@ class App extends Component {
                     )}/>
                     <Route path="/" render={() => (
                         <Page>
-                            <LandingPage/>
+                            {this.state.authorized ? <LandingPage/> : <LoginPage/>}
                         </Page>
                     )}/>
                 </Switch>
