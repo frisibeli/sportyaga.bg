@@ -14,8 +14,5 @@ public class RestApplication {
         SpringApplication.run(RestApplication.class, args);
     }
 
-    @Bean
-    public LoginWebServiceClient loginWebServiceClient() {
-        return new LoginWebServiceClient();
-    }
+
 }
