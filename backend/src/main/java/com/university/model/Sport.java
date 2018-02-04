@@ -1,10 +1,29 @@
 package com.university.model;
 
+import java.util.Date;
+
 public class Sport {
+    private Location name;
+    private Location description;
+    private Date createdAt;
+    private Date updatedAt;
     private int id;
-    private String name;
-    private String imgsrc;
-    private String description;
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public Date getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
 
     public int getId() {
         return id;
@@ -14,27 +33,19 @@ public class Sport {
         this.id = id;
     }
 
-    public String getName() {
+    public Location getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(Location name) {
         this.name = name;
     }
 
-    public String getImgsrc() {
-        return imgsrc;
-    }
-
-    public void setImgsrc(String imgsrc) {
-        this.imgsrc = imgsrc;
-    }
-
-    public String getDescription() {
+    public Location getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(Location description) {
         this.description = description;
     }
 }
