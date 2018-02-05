@@ -6,9 +6,12 @@ import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
+import java.io.IOException;
+import java.util.List;
+
 @Endpoint
 public class TeamEndpoint {
-    private static final String NAMESPACE_URI = "http://spring.io/guides/gs-producing-web-service";
+    private static final String NAMESPACE_URI = "http://service.university.com";
 
     private final TeamRepository teamRepository;
 
@@ -17,11 +20,12 @@ public class TeamEndpoint {
         this.teamRepository = teamRepository;
     }
 
-    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "findNearestTeamRequest")
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "findNearestTeam")
     @ResponsePayload
-    public FindNeareastTeamResponse findNeareastTeam(@RequestPayload FindNeareastTeam request) {
-        FindNeareastTeamResponse response = new FindNeareastTeamResponse();
-        response.setTeam(teamRepository.findNearestTeam(request.getLongitude()), request.getLatitude());
+    public FindNearestTeamResponse findNeareastTeam(@RequestPayload FindNearestTeam request) throws IOException {
+        FindNearestTeamResponse response = new FindNearestTeamResponse();
+        List<Team> teamList = teamRepository.findNearestTeam(request.getLongitude(), request.getLatitude());
+        response.teams = teamList;
         return response;
     }
 }

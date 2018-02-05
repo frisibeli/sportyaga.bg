@@ -2,13 +2,10 @@ package com.university.service;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.university.model.Team;
 import org.apache.commons.io.FileUtils;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
-import javax.jws.WebMethod;
-import javax.jws.WebService;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -23,7 +20,8 @@ public class TeamRepository {
     private List<Team> teams;
 
 
-    public List<Team> findNearestTeam(double longitude, double latitude) {
+    public List<Team> findNearestTeam(double longitude, double latitude) throws IOException {
+        updateTeams();
         List<Team> nearestTeams = new ArrayList<>();
         int counter = 0;
         for (Team team : this.teams) {
@@ -55,7 +53,6 @@ public class TeamRepository {
         return deg * (Math.PI / 180);
     }
 
-    @PostConstruct
     public void updateTeams() throws IOException {
         if (this.objectMapper == null) {
             this.objectMapper = new ObjectMapper();
