@@ -13,6 +13,7 @@ class UserTeamsContainer extends Component {
         this.state = {
             teams: []
         };
+        this.leaveTeam = this.leaveTeam.bind(this);
     }
 
     componentDidMount(){
@@ -21,8 +22,14 @@ class UserTeamsContainer extends Component {
         })
     }
 
+    leaveTeam(id){
+        User.leaveTeam(id).then(()=>{
+            this.setState({teams: this.state.teams.filter(t => t.id != id)})
+        })
+    }
+
     render() {
-        return <MyTeams teams={this.state.teams} />
+        return <MyTeams leaveTeam={this.leaveTeam} teams={this.state.teams} />
     }
 }
 

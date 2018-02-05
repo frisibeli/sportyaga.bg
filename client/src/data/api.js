@@ -38,6 +38,26 @@ class User{
             }
         })
     }
+
+    static joinTeam(id){
+        let user = localStorage.getItem('user');
+        user = JSON.parse(user);
+        return axios.post(`${API_URL}/user/${user.id}/teams/${id}`,{}, {
+            headers:{
+                Authorization: `Bearer ${localStorage.getItem('token')}`
+            }
+        })
+    }
+
+    static leaveTeam(id){
+        let user = localStorage.getItem('user');
+        user = JSON.parse(user);
+        return axios.delete(`${API_URL}/user/${user.id}/teams/${id}`, {
+            headers:{
+                Authorization: `Bearer ${localStorage.getItem('token')}`
+            }
+        })
+    }
 }
 
 export {

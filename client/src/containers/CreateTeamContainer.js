@@ -35,7 +35,7 @@ class CreateTeamContainer extends Component {
     }
 
     createTeam(name, sport, maxPlayers, description) {
-        console.log(sport)
+        if(!name || !sport) { alert('Missing fields'); console.log(name, sport); return true; }
         Team.createTeam(
             name, 
             sport, 

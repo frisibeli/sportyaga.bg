@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 import '../styles/myteams.css'
 
-const Team = ({name}) => (
+const Team = ({name, leave, id}) => (
     <div className="column is-4">
         <div className="card">
             <header className="card-header">
@@ -16,7 +16,7 @@ const Team = ({name}) => (
             </header>
             <div className="card-image">
                 <figure className="image is-4by3">
-                    <img src={require('../images/1.jpg')} alt="Image"/>
+                    <img src={"http://lorempixel.com/400/200/sports/"+Math.floor(Math.random(id)*4)} alt="Image"/>
                 </figure>
             </div>
             <div className="card-content">
@@ -24,7 +24,7 @@ const Team = ({name}) => (
                     <div className="myteams">
                         {/*<a className="button" href="#">*/}
                         <div className="view">
-                            <Link className="view" to={'/team-preview/Валетата'}>
+                            <Link className="view" to={`/team-preview/${id}`}>
                                 Преглед
                             </Link>
                         </div>
@@ -33,7 +33,7 @@ const Team = ({name}) => (
                     <div className="myteams">
                         {/*<a className="button" href="#">*/}
                         <div className="view">
-                            <Link className="view" to={'/team-preview/Валетата'}>
+                            <Link onClick={leave} className="view" to={'/my-teams'}>
                                 Напускане
                             </Link>
                         </div>
@@ -49,7 +49,7 @@ const MyTeams = props => (
     <div className="container section">
 
         <div className="columns">
-            {props.teams.map((t, i) => <Team {...t} key={i}/> )}
+            {props.teams.map((t, i) => <Team {...t} leave={()=>{props.leaveTeam(t.id)}} key={i}/> )}
         </div>
 
     </div>
