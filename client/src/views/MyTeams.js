@@ -4,13 +4,13 @@ import {Link} from 'react-router-dom';
 
 import '../styles/myteams.css'
 
-const Team = props => (
+const Team = ({name}) => (
     <div className="column is-4">
         <div className="card">
             <header className="card-header">
                 <p className="card-header-title">
 
-                    @Валетата
+                    @{name}
                 </p>
 
             </header>
@@ -49,7 +49,7 @@ const MyTeams = props => (
     <div className="container section">
 
         <div className="columns">
-            {props.teams.map((t, i) => <Team key={i}/> )}
+            {props.teams.map((t, i) => <Team {...t} key={i}/> )}
         </div>
 
     </div>
