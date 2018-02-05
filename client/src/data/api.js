@@ -32,11 +32,11 @@ class Auth {
 
 class User{
     static me(){
-        return axios.get(`${API_URL}/user/me`,{
+        return axios.get(`${API_URL}/user/me`, {
             headers:{
                 Authorization: `Bearer ${localStorage.getItem('token')}`
             }
-        });
+        })
     }
 }
 

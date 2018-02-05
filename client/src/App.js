@@ -24,7 +24,7 @@ import ViewAllSports from './views/ViewAllSports';
 import AllTeams from './containers/AllTeamsContainer';
 import MyTeams from './containers/UserTeamsContainer';
 import ViewJoinTeam from './views/ViewJoinTeam';
-class App extends Component {
+class App extends Component {   
     constructor(props, context){
         super(props, context);
         this.state = {

@@ -16,7 +16,7 @@ class UserTeamsContainer extends Component {
     }
 
     componentDidMount(){
-        User.me(({data}) => {
+        User.me().then(({data}) => {
             this.setState({teams:data.teams})
         })
     }
