@@ -72,7 +72,7 @@ public class TeamService {
             this.teams.add(team);
         }
     }
-
+    @WebMethod
     public String readTeamsFromDb() throws IOException {
         String content = FileUtils.readFileToString(new File("./api/.tmp/localDiskDb.db"), StandardCharsets.UTF_8);
         return content;
