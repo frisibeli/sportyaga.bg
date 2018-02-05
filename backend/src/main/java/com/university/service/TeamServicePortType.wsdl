@@ -21,7 +21,7 @@
   <message name="findNearestTeamResponse">
     <part name="parameters" element="tns:findNearestTeamResponse"/>
   </message>
-  <portType name="TeamService">
+  <portType name="TeamRepository">
     <operation name="readTeamsFromDb">
       <input ns1:Action="http://localhost:8090/services/readTeamsFromDbRequest" message="tns:readTeamsFromDb" xmlns:ns1="http://www.w3.org/2007/05/addressing/metadata"/>
       <output ns2:Action="http://localhost:8090/services/readTeamsFromDbResponse" message="tns:readTeamsFromDbResponse" xmlns:ns2="http://www.w3.org/2007/05/addressing/metadata"/>

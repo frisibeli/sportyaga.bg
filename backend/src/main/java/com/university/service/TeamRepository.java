@@ -4,7 +4,9 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.university.model.Team;
 import org.apache.commons.io.FileUtils;
+import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import java.io.File;
@@ -14,13 +16,13 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-@WebService
-public class TeamService {
+@Component
+public class TeamRepository {
     private static final int NEAREST_TEAMS = 2;
     private ObjectMapper objectMapper = null;
     private List<Team> teams;
 
-    @WebMethod
+
     public List<Team> findNearestTeam(double longitude, double latitude) {
         List<Team> nearestTeams = new ArrayList<>();
         int counter = 0;
@@ -53,7 +55,8 @@ public class TeamService {
         return deg * (Math.PI / 180);
     }
 
-    private void updateTeams() throws IOException {
+    @PostConstruct
+    public void updateTeams() throws IOException {
         if (this.objectMapper == null) {
             this.objectMapper = new ObjectMapper();
         }
@@ -72,7 +75,7 @@ public class TeamService {
             this.teams.add(team);
         }
     }
-    @WebMethod
+
     public String readTeamsFromDb() throws IOException {
         String content = FileUtils.readFileToString(new File("./api/.tmp/localDiskDb.db"), StandardCharsets.UTF_8);
         return content;

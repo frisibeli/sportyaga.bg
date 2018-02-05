@@ -19,16 +19,10 @@
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="IOException">
-    <xs:sequence>
-      <xs:element name="message" type="xs:string" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-
   <xs:complexType name="findNearestTeam">
     <xs:sequence>
-      <xs:element name="arg0" type="xs:double"/>
-      <xs:element name="arg1" type="xs:double"/>
+      <xs:element name="longitude" type="xs:double"/>
+      <xs:element name="latitude" type="xs:double"/>
     </xs:sequence>
   </xs:complexType>
 
